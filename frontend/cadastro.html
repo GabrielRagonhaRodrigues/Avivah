@@ -2,49 +2,49 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!--     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
     <title>Cadastro Avivah</title>
 </head>
 <body>
 
     <form method="POST" action="../backend/register.php">
         <div id="pessoal">
-            <input type="text" name="name"> 
-            <input type="radio" value="Sexo">
-            <input type="radio" value="Sexo">
-            <input type="radio" value="Sexo">
-            <input type="select" value="Estado Civil">
-            <input type="date" value="Data de Nascimento">
+            <input type="text" name="name" placeholder="Nome"> 
+            <input type="radio" value="Masculino" id="Masculino" name="sexo"><label for = "Masculino">Masculino</label>
+            <input type="radio" value="Feminino" id="Feminino" name="sexo"><label for="Feminino">Feminino</label>
+            <input type="radio" value="Outro" id="Outro" name="sexo"><label for = "Outro">Outro</label>
+            <input type="select" value="Estado Civil"><br>
+            <input type="date" value="Data de Nascimento"><br>
         </div>    
 
         <div id="enderecos">
-            <input type="text" name="nacionality">
-            <input type="text" name="CEP">
-            <input type="text" name="state">
-            <input type="text" name="city">
-            <input type="text" name="district">
-            <input type="number" value="Numero">
-            <input type="text" name="complement">
-            <input type="number" value="CPF">
+            <input type="text" name="nacionality" placeholder="Nacionalidade"><br>
+            <input type="text" name="CEP" placeholder="CEP"><br>
+            <input type="text" name="state" placeholder="Estado"><br>
+            <input type="text" name="city" placeholder="Cidade"><br>
+            <input type="text" name="district" placeholder="Distrito"><br>
+            <input type="number" value="Numero" placeholder="Número"><br>
+            <input type="text" name="complement" placeholder="Complemento"><br>
+            <input type="number" value="CPF" placeholder="CPF"><br>
         </div>
 
         <div id="contatos">
-            <input type="text" name="telephone1">
-            <input type="text" name="telephone2">
-            <input type="text" name="cel1">
-            <input type="text" name="cel2">
-            <input type="text" name="email1">
-            <input type="text" name="email2">
+            <input type="text" name="telephone1" placeholder="1° Telefone"><br>
+            <input type="text" name="telephone2" placeholder="2° Telefone"><br>
+            <input type="text" name="cel1" placeholder="1° Celular"><br>
+            <input type="text" name="cel2" placeholder="2° Celular"><br>
+            <input type="text" name="email1" placeholder="1° E-mail"><br>
+            <input type="text" name="email2" placeholder="2° E-mail"><br>
         </div>
 
         <div>
-            <input type="text" name="user">
-            <input type="password" name="password">
+            <input type="text" name="user" placeholder="Login"><br>
+            <input type="password" name="password" placeholder="Senha"><br>
         </div>
 
-        <input type="submit" value="cadastrar" name="cadastrar">
+        <input type="submit" value="Cadastrar" name="cadastrar">
 
     </form>
 
