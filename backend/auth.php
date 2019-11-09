@@ -5,26 +5,44 @@ include_once 'conexao.php';
 $user = $_POST['user'];
 $pass = $_POST['password'];
 
-$query = "SELECT * FROM funcionarios WHERE username='" . $_POST["user"] . "' and password = '". $_POST["password"]."'";
+//Cria a condição de pesquisa
+$query = "SELECT * 
+FROM funcionarios 
+WHERE username='" . $_POST["user"] . "' AND password = '". $_POST["password"]."'";
 
-if(!$query){
+//Resultado da condição e casos
+$result = mysqli_query($conexao, $query);
+
+//Retorna número de linhas
+$num_rows = mysqli_num_rows($result);
+
+//Condições com o retorno de linhas
+if($num_rows == 0) {
+    $query = "SELECT * 
+    FROM fornecedores 
+    WHERE username='" . $_POST["user"] . "' AND password = '". $_POST["password"]."'";     
     
-    $query = "SELECT * FROM fornecedores WHERE username='" . $_POST["user"] . "' and password = '". $_POST["password"]."'"; 
+    $result = mysqli_query($conexao, $query);
+    $num_rows = mysqli_num_rows($result);
     
-    if(!$query == false){
+    if($num_rows == 0) {
+        $query = "SELECT * 
+        FROM users 
+        WHERE username='" . $_POST["user"] . "' AND password = '". $_POST["password"]."'";
         
-        $query = "SELECT * FROM users WHERE username='" . $_POST["user"] . "' and password = '". $_POST["password"]."'";
+        $result = mysqli_query($conexao, $query);
+        $num_rows = mysqli_num_rows($result);
         }
     }
-    
-$result = mysqli_query($conexao, $query);
-$data = (mysqli_fetch_row ($result));
+
+//Retorna o array dos campos
+$data = mysqli_fetch_row ($result);
 
 if($data != null) 
 {
-    print_r("<h1><strong>ACESSO PERMITIDO!</strong></h1>");
+    header ('location:../frontend/loja.html');
 } else 
 {
-    print_r("<h1><strong>ACESSO NEGADO!</strong></h1>");
+    print_r("<h1><strong>ACESSO NEGADO !</strong></h1>");
 }
 ?>
