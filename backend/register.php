@@ -2,24 +2,23 @@
 
 include_once 'conexao.php';
 
-$name =
-$sexo =
-$estadocivil =
-$datanasc =
-$nacionality =
-$cep =
-$state =
-$city =
-$district =
-$numero =
-$complement =
-$cpf =
-$telephone1 =
-$telephone2 =
-$cel1 =
-$cel2 =
-$email1 =
-$email2 =
-$user = $_POST['user'];
-$pass = $_POST['password'];
+$data = [];
+
+foreach($_POST as $value)
+{
+    $data[] = $value; 
+}
+
+$query = "SELECT * FROM users WHERE username={$data['username']}";
+$row = mysqli_query($conexao, $query);
+$result = (mysqli_fetch_row ($row));
+
+if(is_null($result))
+{
+    $query = "INSERT INTO users (username) VALUE ('{$data['username']}')";
+    mysqli_query($conexao, $query);
+    print_r("Não existe username com esses valores no banco");
+} else {
+    print_r("Esse usuário ja existe no banco");
+}
 ?>
