@@ -106,20 +106,15 @@ if($num_rows == 0) {
     $num_rows = mysqli_num_rows($result);
 }
 
-$condicao = "INSERT INTO users
-insert into user (nomeUser, sexoUser, dataNascUser, cepUser, estadoUser, 
-cidadeUser, bairroUser, ruaUser, complementoUser ,cpfUser ,telefoneUser ,
-telefone2User ,celularUser ,celular2User ,emailUser ,email2User ,username ,password)
-VALUES ('$name', '$gender', '$birthdate', '$cep', '$state', '$city', '$district', '$street', '$number', '$complement', 
-'$cpf', '$tel1', '$tel2', '$cel1', '$cel2', '$email', '$email2', '$user', '$pass')";
+$query = "INSERT INTO users 
+(nomeUser, sexoUser, dataNascUser, cepUser, estadoUser, cidadeUser, bairroUser, ruaUser, numeroCasaUser, complementoUser ,cpfUser ,telefoneUser ,telefone2User ,celularUser ,celular2User ,
+emailUser ,email2User ,username ,password, idAcesso)
+VALUES ('$name', '$gender', '$birthdate', '$cep', '$state', '$city', '$district', '$street','$number', '$complement', '$cpf', 
+'$tel1', '$tel2', '$cel1', '$cel2', '$email', '$email2', '$user', '$pass', 15)";
 
-$result = mysqli_query($conexao, $condicao);
+//Mysqli query faz a query no banco
+mysqli_query ($conexao, $query);
 
-if ($result != null) {
-    echo "Deu bom";
-}
-else{
-    print_r("Deu ruim");
-}
+header ('location: ../frontend/index.html');
 
 ?>
