@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+    <link rel="stylesheet" href="css/stylecad.css">
+    <title>Cadastro Avivah</title>
+</head>
+<body>
+
+    <form method="POST" action="../backend/register.php">
+        <div id="pessoal">
+            <input type="text" name="name" placeholder="Nome"> 
+            <input type="radio" value="Masculino" id="Masculino" name="sexo"><label for = "Masculino">Masculino</label>
+            <input type="radio" value="Feminino" id="Feminino" name="sexo"><label for="Feminino">Feminino</label>
+            <input type="radio" value="Outro" id="Outro" name="sexo"><label for = "Outro">Outro</label>
+            <input type="date" name="nascimento" value="Data de Nascimento"><br>
+        </div>    
+
+        <div id="enderecos">
+            <input type="text" name="nacionality" placeholder="Nacionalidade"><br>
+            <input type="text" name="cep" placeholder="CEP"><br>
+            <input type="text" name="state" placeholder="Estado"><br>
+            <input type="text" name="city" placeholder="Cidade"><br>
+            <input type="text" name="district" placeholder="Distrito"><br>
+            <input type="text" name="street" placeholder="Rua"><br>
+            <input type="number" name="number" value="Numero" placeholder="Número"><br>
+            <input type="text" name="complement" placeholder="Complemento"><br>
+            <input type="text" name="cpf" placeholder="CPF"><br>
+        </div>
+
+        <div id="contatos">
+            <input type="text" name="tel1" placeholder="1° Telefone"><br>
+            <input type="text" name="tel2" placeholder="2° Telefone"><br>
+            <input type="text" name="cel1" placeholder="1° Celular"><br>
+            <input type="text" name="cel2" placeholder="2° Celular"><br>
+            <input type="text" name="email1" placeholder="1° E-mail"><br>
+            <input type="text" name="email2" placeholder="2° E-mail"><br>
+        </div>
+
+        <div>
+            <input type="text" name="user" placeholder="Login"><br>
+            <input type="password" name="password" placeholder="Senha"><br>
+        </div>
+
+        <input type="submit" value="Cadastrar" name="cadastrar">
+
+    </form>
+
+</body>
+</html>
