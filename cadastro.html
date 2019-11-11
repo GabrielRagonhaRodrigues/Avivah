@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylecad.css">
+    <title>Cadastro Avivah</title>
+</head>
+<body>
+    <h1>Cadastre-se</h1>
+    <hr/>
+        <div id="topo">Informações Pessoais</div>
+        <form method="POST" action="../backend/register.php"></form>
+        <div id="pessoal">
+            <section class="um">
+            <input type="text" name="name" placeholder="Nome"> 
+            <p>Sexo:</p>
+            <label class="container">Masculino
+                <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+            </label>
+            <label class="container">Feminino
+                <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+            </label>
+            <label class="container">Outro
+                <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+            </label>
+            <select name="estado civil" id="estacivil" form="Estado Civil">
+                <option value="estado" selected>Estado Civil</option>
+                <option value="casado">Casado</option>
+                <option value="solteiro">Solteiro</option>
+                <option value="amasiado">Amasiado</option>
+                <option value="viuvo">Viúvo</option>
+                <option value="divorciado">Divorciado</option>
+            </select>
+            <input type="date" name="nascimento" value="Data de Nascimento">
+            
+            </div>    
+
+        <div id="topo">Endereço</div>
+        <section class="um">
+        <div id="enderecos">
+            
+            <input type="text" name="nacionality" placeholder="Nacionalidade">
+            <input type="text" name="CEP" placeholder="CEP">
+            <input type="text" name="state" placeholder="Estado">
+            <input type="text" name="city" placeholder="Cidade">
+            <input type="text" name="district" placeholder="Distrito">
+            <input type="number" value="Numero" placeholder="Número">
+            <input type="text" name="complement" placeholder="Complemento">
+            <input type="number" value="CPF" placeholder="CPF">
+        </div>
+        </section>
+        <div id="topo">Contato</div>
+        <div id="contatos">
+            
+            <input type="text" name="telephone1" placeholder="1° Telefone">
+            <input type="text" name="telephone2" placeholder="2° Telefone">
+            <input type="text" name="cel1" placeholder="1° Celular">
+            <input type="text" name="cel2" placeholder="2° Celular">
+            <input type="text" name="email1" placeholder="1° E-mail">
+            <input type="text" name="email2" placeholder="2° E-mail">
+        </div>
+
+        <div id="topo">Úsuario e Senha</div>
+        <div id="user">
+            
+            <input type="text" name="user" placeholder="Login">
+            <input type="password" name="password" placeholder="Senha">
+        </div>
+
+        <input type="submit" value="Cadastrar" name="cadastrar">
+
+    </form>
+
+</body>
+</html>
