@@ -14,88 +14,181 @@ h1{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 24pt;
     margin-top: 10px;
-    color: #054AA5;
+    color: white;
+    text-shadow: 1px 1px rgb(44, 44, 44);
 }
 
 hr{
+    border: 2px solid gray;
     margin-left: 15%;
     width: 70%;
-    
+
 }
 
 input{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 14pt;
-    color: whitesmoke;
+    color: #858585;
     padding: 3px;
     background-color: rgb(75, 75, 75);
+    cursor: text;
 }
 
-#geral{
-    margin-left: 27.5%;
-    width: 43%;
+#topo, #pessoal, #enderecos, #contatos, #user{
+    margin-left: 25%;
+    width: 50%;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 14pt;
-    margin-top: 25px;
+}
+
+input{
+    width: 25%;
+    height: 50%;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14pt;
 }
 
 #topo{
-    background-color: #054AA5;
-    border: 2px solid #003E8D;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-width: 5px;
-    margin-top: 10px;
+    background-color: #56baed;
+    border: 1px solid gray;
+    color: white;
+    text-shadow: 1px 1px rgb(44, 44, 44);
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: 20px;
 }
 
 #pessoal{
     border: 2px solid gray;
-    
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 #pessoal input{
     border-radius: 5px;
-    border-color: #c0c0c0;
+    border-color: gray;
     margin: 3px;
 }
 
+p{
+    color: #858585;
+    text-shadow: 1px 1px rgb(44, 44, 44);
+    padding-left: 10px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14pt;
+    color: #858585;
+    text-shadow: 1px 1px rgb(44, 44, 44);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(75, 75, 75);
+    border-radius: 50%;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #56baed;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    top: 9px;
+   left: 9px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: rgb(75, 75, 75);;
+}
+
+select{
+    border-radius: 5px;
+    border-color: gray;
+    margin: 3px;
+    background-color: rgb(75, 75, 75);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14pt;
+    color: #858585;
+}
+
 #enderecos{
-    border: 2px solid gray;
+    border: 1px solid gray;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 #enderecos input{
     border-radius: 5px;
-    border-color: #c0c0c0;
+    border-color: gray;
     margin: 3px;
 }
 
 #contatos{
-    border: 2px solid gray;
+    border: 1px solid gray;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 #contatos input{
     border-radius: 5px;
-    border-color: #c0c0c0;
+    border-color: gray;
     margin: 3px;
 }
 
 #user{
-    border: 2px solid gray;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    margin-bottom: 10px
+    border: 1px solid gray;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #user input{
     border-radius: 5px;
-    border-color: #c0c0c0;
+    border-color: gray;
     margin: 3px;
 }
 
-.cadastrar{
-    margin-left: 44%;
-    color: #c0c0c0;
-    background-color: gray;
+input[type=submit]{
+    color: white;
+    text-shadow: 1px 1px rgb(44, 44, 44);
+    background-color: #56baed;
     border-radius: 10px;
     cursor: pointer;
+    width: 40%;
+    margin-top: 5%;
+    margin-bottom:10% ;
+    margin-left: 30%;
 }
-.cadastrar:hover{
-    background-color: rgb(105, 105, 105);
+input[type=submit]:hover{
+    background-color: #4298c4;
     border-color: rgb(105, 105, 105);
 }

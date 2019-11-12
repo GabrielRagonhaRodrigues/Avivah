@@ -2,24 +2,40 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
     <link rel="stylesheet" href="css/stylecad.css">
     <title>Cadastro Avivah</title>
 </head>
 <body>
-
-    <form method="POST" action="../backend/register.php">
+    <h1>Cadastre-se</h1>
+    <hr/>
+        <div id="topo">Informações Pessoais</div>
+        <form method="POST" action="../backend/register.php"></form>
         <div id="pessoal">
-            <input type="text" name="name" placeholder="Nome"> 
-            <input type="radio" value="Masculino" id="Masculino" name="sexo"><label for = "Masculino">Masculino</label>
-            <input type="radio" value="Feminino" id="Feminino" name="sexo"><label for="Feminino">Feminino</label>
-            <input type="radio" value="Outro" id="Outro" name="sexo"><label for = "Outro">Outro</label>
-            <input type="date" name="nascimento" value="Data de Nascimento"><br>
-        </div>    
+            <section class="um">
+            Nome: <input type="text" name="name" placeholder="Nome">
+            <p>Sexo</p>
+            <label class="container">Masculino
+                <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+            </label>
+            <label class="container">Feminino
+                <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+            </label>
+            <label class="container">Outro
+                <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+            </label>
+            <input type="date" name="nascimento" value="Data de Nascimento">
+            <input type="text" name="nacionality" placeholder="Nacionalidade">
+            <input type="number" value="CPF" placeholder="CPF">
 
+            </div>    
+
+        <div id="topo">Endereço</div>
+        <section class="um">
         <div id="enderecos">
+<<<<<<< HEAD
             <input type="text" name="nacionality" placeholder="Nacionalidade"><br>
             <input type="text" name="cep" placeholder="CEP"><br>
             <input type="text" name="state" placeholder="Estado"><br>
@@ -30,19 +46,33 @@
             <input type="text" name="complement" placeholder="Complemento"><br>
             <input type="text" name="cpf" placeholder="CPF"><br>
         </div>
+=======
+>>>>>>> b8efaa2af2a37b0450accae6f2dc20e1523f8d2e
 
+            <input type="text" name="CEP" placeholder="CEP">
+            <input type="text" name="state" placeholder="Estado">
+            <input type="text" name="city" placeholder="Cidade">
+            <input type="text" name="district" placeholder="Bairro">
+            <input type="number" value="Numero" placeholder="Número">
+            <input type="text" name="complement" placeholder="Complemento">
+        </div>
+        </section>
+        <div id="topo">Contato</div>
         <div id="contatos">
-            <input type="text" name="tel1" placeholder="1° Telefone"><br>
-            <input type="text" name="tel2" placeholder="2° Telefone"><br>
-            <input type="text" name="cel1" placeholder="1° Celular"><br>
-            <input type="text" name="cel2" placeholder="2° Celular"><br>
-            <input type="text" name="email1" placeholder="1° E-mail"><br>
-            <input type="text" name="email2" placeholder="2° E-mail"><br>
+
+            <input type="text" name="telephone1" placeholder="1° Telefone">
+            <input type="text" name="telephone2" placeholder="2° Telefone">
+            <input type="text" name="cel1" placeholder="1° Celular">
+            <input type="text" name="cel2" placeholder="2° Celular">
+            <input type="text" name="email1" placeholder="1° E-mail">
+            <input type="text" name="email2" placeholder="2° E-mail">
         </div>
 
-        <div>
-            <input type="text" name="user" placeholder="Login"><br>
-            <input type="password" name="password" placeholder="Senha"><br>
+        <div id="topo">Úsuario e Senha</div>
+        <div id="user">
+
+            <input type="text" name="user" placeholder="Login">
+            <input type="password" name="password" placeholder="Senha">
         </div>
 
         <input type="submit" value="Cadastrar" name="cadastrar">
