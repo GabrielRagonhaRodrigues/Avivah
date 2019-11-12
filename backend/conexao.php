@@ -4,10 +4,9 @@ $host = "localhost";
 $user = "root";
 $pass = "";
 $banco = "avivah";
-$port = 3308;
 
 //Cria a conexão
-$conexao = new mysqli ($host, $user,$pass,$banco,$port) or die ("Não encontrado servidor");
+$conexao = new mysqli ($host, $user,$pass,$banco) or die ("Não encontrado servidor");
 
 //Mostra o erro caso seja dado
 if ($conexao->connect_error) {
