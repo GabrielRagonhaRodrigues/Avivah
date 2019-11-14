@@ -110,7 +110,7 @@ $query = "INSERT INTO users
 (nomeUser, sexoUser, dataNascUser, cepUser, estadoUser, cidadeUser, bairroUser, ruaUser, numeroCasaUser, complementoUser ,cpfUser ,telefoneUser ,telefone2User ,celularUser ,celular2User ,
 emailUser ,email2User ,username ,password, idAcesso)
 VALUES ('$name', '$gender', '$birthdate', '$cep', '$state', '$city', '$district', '$street','$number', '$complement', '$cpf', 
-'$tel1', '$tel2', '$cel1', '$cel2', '$email', '$email2', '$user', '$pass', 15)";
+'$tel1', '$tel2', '$cel1', '$cel2', '$email', '$email2', '$user', '$pass', 2)";
 
 //Mysqli query faz a query no banco
 mysqli_query ($conexao, $query);
