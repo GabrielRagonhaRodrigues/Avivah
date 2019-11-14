@@ -12,32 +12,31 @@
     <form method="POST" action="../backend/register.php">
         <h1>Cadastro Avivah</h1>
         <div id="pessoal">
-            <input type="text" name="name" placeholder="Nome" required> <br><br>
-            <input type="radio" value="Masculino" id="Masculino" name="sexo"><label for = "Masculino">Masculino</label>
+            <input type="text" name="name" placeholder="Nome" maxlength="80" required> <br><br>
+            <input type="radio" value="Masculino" id="Masculino" name="sexo" ><label for = "Masculino">Masculino</label>
             <input type="radio" value="Feminino" id="Feminino" name="sexo"><label for="Feminino">Feminino</label>
             <input type="radio" value="Outro" id="Outro" name="sexo"><label for = "Outro">Outro</label><br>
             <input type="date" name="nascimento" value="Data de Nascimento" required><br>
-            <input type="text" name="nacionality" placeholder="Nacionalidade" required><br>
-            <input type="text" name="cpf" placeholder="CPF" required><br>
+            <input type="text" name="cpf" placeholder="CPF" maxlength="15" required><br>
         </div>    
 
         <div id="enderecos">
-            <input type="text" name="cep" placeholder="CEP" required><br>
-            <input type="text" name="state" placeholder="Estado" required><br>
-            <input type="text" name="city" placeholder="Cidade" required><br>
-            <input type="text" name="district" placeholder="Bairro" required><br>
-            <input type="text" name="street" placeholder="Rua" required><br>
-            <input type="number" name="number" placeholder="Número" required><br>
-            <input type="text" name="complement" placeholder="Complemento"><br>
+            <input type="text" name="cep" placeholder="CEP" maxlength="8" required><br>
+            <input type="text" name="state" placeholder="Estado" maxlength="80" required><br>
+            <input type="text" name="city" placeholder="Cidade" maxlength="80" required><br>
+            <input type="text" name="district" placeholder="Bairro" maxlength="80" required><br>
+            <input type="text" name="street" placeholder="Rua" maxlength="80" required><br>
+            <input type="number" name="number" placeholder="Número" maxlength="6" required><br>
+            <input type="text" name="complement" placeholder="Complemento" maxlength="260"><br>
         </div>
 
         <div id="contatos">
-            <input type="text" name="tel1" placeholder="1° Telefone"><br>
-            <input type="text" name="tel2" placeholder="2° Telefone"><br>
-            <input type="text" name="cel1" placeholder="1° Celular" required><br>
-            <input type="text" name="cel2" placeholder="2° Celular"><br>
-            <input type="text" name="email1" placeholder="1° E-mail" required><br>
-            <input type="text" name="email2" placeholder="2° E-mail"><br>
+            <input type="text" name="tel1" placeholder="1° Telefone" maxlength="12"><br>
+            <input type="text" name="tel2" placeholder="2° Telefone" maxlength="12"><br>
+            <input type="text" name="cel1" placeholder="1° Celular" maxlength="13" required><br>
+            <input type="text" name="cel2" placeholder="2° Celular" maxlength="13"><br>
+            <input type="email" name="email1" placeholder="1° E-mail" maxlength="100"required><br>
+            <input type="email" name="email2" placeholder="2° E-mail" maxlength="100"><br>
         </div>
 
         <div>
