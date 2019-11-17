@@ -2,9 +2,6 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/estilo2.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Cadastro Avivah</title>
 </head>
 <body>
@@ -12,12 +9,12 @@
     <form method="POST" action="../backend/register.php">
         <h1>Cadastro Avivah</h1>
         <div id="pessoal">
-            <input type="text" name="name" placeholder="Nome" maxlength="80" required> <br><br>
+            <input type="text" name="name" placeholder="Nome" maxlength="80" autocomplete="off" required> <br><br>
             <input type="radio" value="Masculino" id="Masculino" name="sexo" ><label for = "Masculino">Masculino</label>
             <input type="radio" value="Feminino" id="Feminino" name="sexo"><label for="Feminino">Feminino</label>
             <input type="radio" value="Outro" id="Outro" name="sexo"><label for = "Outro">Outro</label><br>
             <input type="date" name="nascimento" value="Data de Nascimento" required><br>
-            <input type="text" name="cpf" placeholder="CPF" maxlength="15" required><br>
+            <input type="text" name="cpf" placeholder="CPF" maxlength="15" autocomplete="off" required><br>
         </div>    
 
         <div id="enderecos">
@@ -31,17 +28,17 @@
         </div>
 
         <div id="contatos">
-            <input type="text" name="tel1" placeholder="1° Telefone" maxlength="12"><br>
-            <input type="text" name="tel2" placeholder="2° Telefone" maxlength="12"><br>
-            <input type="text" name="cel1" placeholder="1° Celular" maxlength="13" required><br>
-            <input type="text" name="cel2" placeholder="2° Celular" maxlength="13"><br>
-            <input type="email" name="email1" placeholder="1° E-mail" maxlength="100"required><br>
-            <input type="email" name="email2" placeholder="2° E-mail" maxlength="100"><br>
+            <input type="text" name="tel1" placeholder="1° Telefone" maxlength="12" autocomplete="off"><br>
+            <input type="text" name="tel2" placeholder="2° Telefone" maxlength="12" autocomplete="off"><br>
+            <input type="text" name="cel1" placeholder="1° Celular" maxlength="13" autocomplete="off" required><br>
+            <input type="text" name="cel2" placeholder="2° Celular" maxlength="13" autocomplete="off"><br>
+            <input type="email" name="email1" placeholder="1° E-mail" maxlength="100" autocomplete="off" required><br>
+            <input type="email" name="email2" placeholder="2° E-mail" maxlength="100" autocomplete="off"><br>
         </div>
 
         <div>
-            <input type="text" name="user" placeholder="Login" required><br>
-            <input type="password" name="password" placeholder="Senha" required><br>
+            <input type="text" name="user" placeholder="Login" autocomplete="off" required><br>
+            <input type="password" name="password" placeholder="Senha" autocomplete="off" required><br>
         </div>
 
         <input type="submit" value="Cadastrar" name="cadastrar">
