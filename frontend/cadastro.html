@@ -12,18 +12,16 @@
     <form method="POST" action="../backend/register.php">
         <h1>Cadastro Avivah</h1>
         <div id="pessoal">
-            <input type="text" name="name" placeholder="Nome" maxlength="80" required> <br><br>
             <input type="text" name="name" placeholder="Nome" maxlength="80" autocomplete="off" required> <br><br>
             <input type="radio" value="Masculino" id="Masculino" name="sexo" ><label for = "Masculino">Masculino</label>
             <input type="radio" value="Feminino" id="Feminino" name="sexo"><label for="Feminino">Feminino</label>
             <input type="radio" value="Outro" id="Outro" name="sexo"><label for = "Outro">Outro</label><br>
-            <input type="date" name="nascimento" value="Data de Nascimento" required><br>
-            <input type="text" name="cpf" placeholder="CPF" maxlength="15" required><br>
-            <input type="text" name="cpf" placeholder="CPF" maxlength="15" autocomplete="off" required><br>
+            <input type="date" name="nascimento" required><br>
+            <input type="text" id="cpf" name="cpf" placeholder="CPF" maxlength="15" autocomplete="off" required><br>
         </div>    
 
         <div id="enderecos">
-            <input type="text" name="cep" placeholder="CEP" maxlength="8" required><br>
+            <input type="text" id="cep" name="cep" placeholder="CEP" maxlength="9" required><br>
             <input type="text" name="state" placeholder="Estado" maxlength="80" required><br>
             <input type="text" name="city" placeholder="Cidade" maxlength="80" required><br>
             <input type="text" name="district" placeholder="Bairro" maxlength="80" required><br>
@@ -33,23 +31,15 @@
         </div>
 
         <div id="contatos">
-            <input type="text" name="tel1" placeholder="1° Telefone" maxlength="12"><br>
-            <input type="text" name="tel2" placeholder="2° Telefone" maxlength="12"><br>
-            <input type="text" name="cel1" placeholder="1° Celular" maxlength="13" required><br>
-            <input type="text" name="cel2" placeholder="2° Celular" maxlength="13"><br>
-            <input type="email" name="email1" placeholder="1° E-mail" maxlength="100"required><br>
-            <input type="email" name="email2" placeholder="2° E-mail" maxlength="100"><br>
-            <input type="text" name="tel1" placeholder="1° Telefone" maxlength="12" autocomplete="off"><br>
-            <input type="text" name="tel2" placeholder="2° Telefone" maxlength="12" autocomplete="off"><br>
-            <input type="text" name="cel1" placeholder="1° Celular" maxlength="13" autocomplete="off" required><br>
-            <input type="text" name="cel2" placeholder="2° Celular" maxlength="13" autocomplete="off"><br>
+            <input type="text" class="tel" name="tel1" placeholder="1° Telefone" maxlength="14" autocomplete="off"><br>
+            <input type="text" class="tel" name="tel2" placeholder="2° Telefone" maxlength="14" autocomplete="off"><br>
+            <input type="text" class="cel" name="cel1" placeholder="1° Celular" maxlength="15" autocomplete="off" required><br>
+            <input type="text" class="cel" name="cel2" placeholder="2° Celular" maxlength="15" autocomplete="off"><br>
             <input type="email" name="email1" placeholder="1° E-mail" maxlength="100" autocomplete="off" required><br>
             <input type="email" name="email2" placeholder="2° E-mail" maxlength="100" autocomplete="off"><br>
         </div>
 
         <div>
-            <input type="text" name="user" placeholder="Login" required><br>
-            <input type="password" name="password" placeholder="Senha" required><br>
             <input type="text" name="user" placeholder="Login" autocomplete="off" required><br>
             <input type="password" name="password" placeholder="Senha" autocomplete="off" required><br>
         </div>
@@ -59,5 +49,14 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+    <script>
+        $(document).ready (function() {
+            $("#cpf").mask('000.000.000-00');
+            $("#cep").mask('00000-000');
+            $(".tel").mask('(00) 0000-0000');
+            $(".cel").mask('(00) 00000-0000');
+        });
+    </script>
 </body>
 </html>
