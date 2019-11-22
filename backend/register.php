@@ -6,6 +6,10 @@ $name = $_POST['name'];
 $gender = $_POST['sexo'];
 $birthdate = $_POST['nascimento'];
 $cep = $_POST['cep'];
+
+//Dando REPLACE na MASK para o INSERT
+    $cep = str_replace("-","",$cep);
+
 $state = $_POST['state'];
 $city = $_POST['city'];
 $district = $_POST['district'];
@@ -15,16 +19,46 @@ $complement = $_POST['complement'];
 
 $tel1 = $_POST['tel1'];
 $tel2 = $_POST['tel2'];
+
+//Dando REPLACE na MASK para o INSERT
+    $tel1 = str_replace("(","",$tel1);
+    $tel1 = str_replace(")","",$tel1);
+    $tel1 = str_replace(" ","",$tel1);
+    $tel1 = str_replace("-","",$tel1);
+
+//Dando REPLACE na MASK para o INSERT
+    $tel2 = str_replace("(","",$tel2);
+    $tel2 = str_replace(")","",$tel2);
+    $tel2 = str_replace(" ","",$tel2);
+    $tel2 = str_replace("-","",$tel2);
+
 $cel1 = $_POST['cel1'];
 $cel2 = $_POST['cel2'];
 
-$email2 = $_POST['email2'];
+//Dando REPLACE na MASK para o INSERT
+    $cel1 = str_replace("(","",$cel1);
+    $cel1 = str_replace(")","",$cel1);
+    $cel1 = str_replace(" ","",$cel1);
+    $cel1 = str_replace("-","",$cel1);
 
+//Dando REPLACE na MASK para o INSERT
+    $cel2 = str_replace("(","",$cel2);
+    $cel2 = str_replace(")","",$cel2);
+    $cel2 = str_replace(" ","",$cel2);
+    $cel2 = str_replace("-","",$cel2);
+
+
+$email2 = $_POST['email2'];
 $pass = $_POST['password'];
 
 
 $user = $_POST['user'];
 $cpf = $_POST['cpf'];
+
+//Dando REPLACE na MASK para o INSERT
+    $cpf = str_replace(".","",$cpf);
+    $cpf = str_replace("-","",$cpf);
+
 $email = $_POST['email1'];
 
 //Cria a condição de pesquisa
