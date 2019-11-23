@@ -63,7 +63,7 @@ $email = $_POST['email1'];
 
 //Cria a condição de pesquisa
 $query = "SELECT * 
-FROM funcionarios 
+FROM employies
 WHERE username='" . $_POST["user"] . "'";
 
 //Resultado da condição e casos
@@ -75,7 +75,7 @@ $num_rows = mysqli_num_rows($result);
 //Condições com o retorno de linhas
 if($num_rows == 0) {
     $query = "SELECT * 
-    FROM fornecedores 
+    FROM providers 
     WHERE username='" . $_POST["user"] . "'";     
     
     $result = mysqli_query($conexao, $query);
@@ -96,8 +96,8 @@ if($num_rows == 0) {
 
 //Cria a condição de pesquisa
 $query = "SELECT * 
-FROM funcionarios 
-WHERE cpfFuncionario='" . $_POST["cpf"] . "'";
+FROM employies
+WHERE cpfEmployee='" . $_POST["cpf"] . "'";
 
 //Resultado da condição e casos
 $result = mysqli_query($conexao, $query);
@@ -121,8 +121,8 @@ if($num_rows == 0) {
 
 //Cria a condição de pesquisa
 $query = "SELECT * 
-FROM funcionarios 
-WHERE emailFuncionario='" . $_POST["email1"] . "'";
+FROM employies 
+WHERE emailEmployee='" . $_POST["email1"] . "'";
 
 //Resultado da condição e casos
 $result = mysqli_query($conexao, $query);
@@ -141,14 +141,16 @@ if($num_rows == 0) {
 }
 
 $query = "INSERT INTO users 
-(nomeUser, sexoUser, dataNascUser, cepUser, estadoUser, cidadeUser, bairroUser, ruaUser, numeroCasaUser, complementoUser ,cpfUser ,telefoneUser ,telefone2User ,celularUser ,celular2User ,
-emailUser ,email2User ,username ,password, idAcesso)
+(nameUser, sexUser, dateBornUser, cepUser, stateUser, cityUser, neighborhoodUser, streetUser, numberHouseUser, adjunctUser ,cpfUser ,telephoneUser ,telephone2User ,cellphoneUser ,cellphone2User ,
+emailUser ,email2User ,username ,password, idAccess)
 VALUES ('$name', '$gender', '$birthdate', '$cep', '$state', '$city', '$district', '$street','$number', '$complement', '$cpf', 
 '$tel1', '$tel2', '$cel1', '$cel2', '$email', '$email2', '$user', '$pass', 2)";
 
 //Mysqli query faz a query no banco
 mysqli_query ($conexao, $query);
-
+if(!mysqli_query ($conexao, $query)){
+    echo mysqli_errno($conexao) . ": " . mysqli_error($conexao) . "\n";
+}
 header ('location: ../frontend/index.html');
 
 ?>
