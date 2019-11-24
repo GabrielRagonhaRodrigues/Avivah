@@ -7,7 +7,7 @@ $pass = $_POST['password'];
 
 //Cria a condição de pesquisa
 $query = "SELECT * 
-FROM funcionarios 
+FROM employies 
 WHERE username='" . $_POST["user"] . "' AND password = '". $_POST["password"]."'";
 
 //Resultado da condição e casos
@@ -19,7 +19,7 @@ $num_rows = mysqli_num_rows($result);
 //Condições com o retorno de linhas
 if($num_rows == 0) {
     $query = "SELECT * 
-    FROM fornecedores 
+    FROM providers 
     WHERE username='" . $_POST["user"] . "' AND password = '". $_POST["password"]."'";     
     
     $result = mysqli_query($conexao, $query);
