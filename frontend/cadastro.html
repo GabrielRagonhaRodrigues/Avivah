@@ -1,64 +1,195 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/estilo2.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Cadastro Avivah</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cadastro Avivah</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+        #navName{
+            margin-left: 10px;
+        }
+        #gender{
+            padding-right: 30px;
+        }
+        #pgen{
+            margin-left: 40px;
+        }
+        </style>
+    </head>
+    <body>
+        <!--navigation bar-->
+            <nav class="nav-wrapper indigo">
+                <div class="container">
+                    <a href="#" class="brand-logo">Avivah</a>
+                    <a href="" class="sidenav-trigger" data-target="mobile-links"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+                <ul class="sidenav" id="mobile-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </nav>
+        <!--Container-->
+        <div class="container">
+            <!--Title-->
+            <h1 class="center">Cadastro Avivah</h1>
 
-    <form method="POST" action="../backend/register.php">
-        <h1>Cadastro Avivah</h1>
-        <div id="pessoal">
-            <input type="text" name="name" placeholder="Nome" maxlength="80" autocomplete="off" required> <br><br>
-            <input type="radio" value="Masculino" id="Masculino" name="sexo" ><label for = "Masculino">Masculino</label>
-            <input type="radio" value="Feminino" id="Feminino" name="sexo"><label for="Feminino">Feminino</label>
-            <input type="radio" value="Outro" id="Outro" name="sexo"><label for = "Outro">Outro</label><br>
-            <input type="date" name="nascimento" required><br>
-            <input type="text" id="cpf" name="cpf" placeholder="CPF" maxlength="15" autocomplete="off" required><br>
-        </div>    
-
-        <div id="enderecos">
-            <input type="text" id="cep" name="cep" placeholder="CEP" maxlength="9" required><br>
-            <input type="text" name="state" placeholder="Estado" maxlength="80" required><br>
-            <input type="text" name="city" placeholder="Cidade" maxlength="80" required><br>
-            <input type="text" name="district" placeholder="Bairro" maxlength="80" required><br>
-            <input type="text" name="street" placeholder="Rua" maxlength="80" required><br>
-            <input type="number" name="number" placeholder="Número" maxlength="6" required><br>
-            <input type="text" name="complement" placeholder="Complemento" maxlength="260"><br>
+            <!--Personal Information-->
+            <h5 class="center"><i class="material-icons prefix">person</i>Personal Information</h5>
+            <div class="row">
+                <p class="col s12">
+                    <div class="row">
+                            <div class="input-field col s4">
+                                <input name="first_name" id="first_name" type="text" class="validate" required maxlength="80" autocomplete="off">
+                                <label class="active" for="first_name">First Name</label>
+                            </div>
+                            <div class="input-field col s4">
+                                <input name="last_name" id="last_name" type="text" class="validate" required maxlength="80" autocomplete="off">
+                                <label class="active" for="last_name">Last Name</label>
+                            </div>
+                        <div class="input-field col s4">
+                            <input name="cpf" id="cpf" type="number" class="validate" required autocomplete="off" maxlength="15">
+                            <label class="active" for="cpf">CPF</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">cake</i>
+                            <input name="birth" id="birth" type="date" class="validate" required>
+                            <label class="active" for="birth">Birth Date</label>
+                        </div>
+                        <div class="input-field col s6">
+                            
+                            <i class="material-icons prefix" id="pgen">wc</i>
+                            <p id="gender">Gender:</p>
+                            <p> 
+                            <label>
+                                  <input class="with-gap" name="gender" type="radio"  />
+                                  <span>Male</span>
+                                </label>
+                                <label>
+                                  <input class="with-gap" name="gender" type="radio"  />
+                                  <span>Female</span>
+                                </label>
+                                <label>
+                                  <input class="with-gap" name="gender" type="radio"  />
+                                  <span>Other</span>
+                                </label></p>  
+                        </div>
+                </div>
+                
+            </div>
+            <!--Address-->
+            <h5 class="center"><i class="material-icons prefix">house</i>Address</h5>
+            <div class="row">
+                
+                    <div class="row">
+                            <div class="input-field col s4">
+                                <input id="cep" type="number" class="validate" required autocomplete="off" maxlength="9">
+                                <label class="active" for="cep">CEP</label>
+                            </div>
+                            <div class="input-field col s4">
+                                <input name="state" id="uf" type="text" class="validate" required autocomplete="off" maxlength="2">
+                                <label class="active" for="uf">UF</label>
+                            </div>
+                        <div class="input-field col s4">
+                            <input name="city" id="city" type="text" class="validate" required autocomplete="off" maxlength="50">
+                            <label class="active" for="city">City</label>
+                        </div>
+                        <div class="input-field col s6 l3">
+                                <input name="neighborhood" id="neighborhood" type="text" class="validate" required autocomplete="off" maxlength="80">
+                                <label class="active" for="neighborhood">Neighborhood</label>
+                            </div>
+                            <div class="input-field col s6 l3">
+                                <input name="street" id="street" type="text" class="validate" required autocomplete="off" maxlength="80">
+                                <label class="active" for="street">Street</label>
+                            </div>
+                        <div class="input-field col s6 l3">
+                            <input id="number" type="number" class="validate" required autocomplete="off" maxlength="5">
+                            <label class="active" for="number">Number</label>
+                        </div>
+                        <div class="input-field col s6 l3">
+                            <input name="complement" id="complement" type="text" class="validate" required autocomplete="off" maxlength="30">
+                            <label class="active" for="complement">Complement</label>
+                        </div>
+                </div>
+                
+            </div>
+            <!--Contacts-->
+            
+            <h5 class="center"><i class="material-icons prefix">contacts</i>Contacts</h5>
+            <div class="row">
+               
+                    <div class="row">
+                        <div class="input-field col s6 l6">
+                            <i class="material-icons prefix">call</i>
+                            <input name="phone" id="phone" type="number" class="validate" required autocomplete="off" maxlength="14">
+                            <label class="active" for="phone">Phone</label>
+                        </div>
+                        <div class="input-field col s6 l6">
+                            <i class="material-icons prefix">call</i>
+                            <input name="second_phone" id="second_phone" type="number" class="validate" required autocomplete="off" maxlength="14">
+                            <label class="active" for="second_phone">Secondary Phone</label>
+                        </div>
+                        <div class="input-field col s6 l6">
+                            <i class="material-icons prefix">stay_current_portrait</i>
+                            <input name="mobile" id="mobile" type="number" class="validate" required autocomplete="off" maxlength="15">
+                            <label class="active" for="mobile">Mobile</label>
+                        </div>
+                        <div class="input-field col s6 l6">
+                             <i class="material-icons prefix">stay_current_portrait</i>
+                            <input name="second_mobile" id="second_mobile" type="number" class="validate" required autocomplete="off" maxlength="15">
+                            <label class="active" for="second_mobile">Secondary Mobile</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">email</i>
+                            <input name="email" id="email" type="email" class="validate" required autocomplete="off" maxlength="80">
+                            <label class="active" for="email">Email</label>
+                        </div>
+                        <div class="input-field col s6">
+                             <i class="material-icons prefix">email</i>
+                            <input name="second_email" id="second_email" type="email" class="validate" required autocomplete="off" maxlength="80">
+                            <label class="active" for="second_email">Secondary Email</label>
+                        </div>
+                </div>
+                
+            </div>
+            <!--Login-->
+            <h5 class="center"><i class="material-icons prefix">account_box</i>Login</h5>
+            <div class="row">
+                
+                    <div class="row">
+                            <div class="input-field col s12 l6">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input name="login" id="login" type="text" class="validate" required autocomplete="off">
+                                <label class="active" for="login">Login</label>
+                            </div>
+                            <div class="input-field col s12 l6">
+                                <i class="material-icons prefix">vpn_key</i>
+                                <input name="password" id="password" type="password" class="validate" required autocomplete="off">
+                                <label class="active" for="password">Password</label>
+                            </div>
+                    </div>
+                </form>
+            </div>
+            <!--Submit-->
+            <button name="submit" class="btn waves-effect waves-light indigo" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
         </div>
-
-        <div id="contatos">
-            <input type="text" class="tel" name="tel1" placeholder="1° Telefone" maxlength="14" autocomplete="off"><br>
-            <input type="text" class="tel" name="tel2" placeholder="2° Telefone" maxlength="14" autocomplete="off"><br>
-            <input type="text" class="cel" name="cel1" placeholder="1° Celular" maxlength="15" autocomplete="off" required><br>
-            <input type="text" class="cel" name="cel2" placeholder="2° Celular" maxlength="15" autocomplete="off"><br>
-            <input type="email" name="email1" placeholder="1° E-mail" maxlength="100" autocomplete="off" required><br>
-            <input type="email" name="email2" placeholder="2° E-mail" maxlength="100" autocomplete="off"><br>
-        </div>
-
-        <div>
-            <input type="text" name="user" placeholder="Login" autocomplete="off" required><br>
-            <input type="password" name="password" placeholder="Senha" autocomplete="off" required><br>
-        </div>
-
-        <input type="submit" value="Cadastrar" name="cadastrar">
-    </form>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
-    <script>
-        $(document).ready (function() {
-            $("#cpf").mask('000.000.000-00');
-            $("#cep").mask('00000-000');
-            $(".tel").mask('(00) 0000-0000');
-            $(".cel").mask('(00) 00000-0000');
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
         });
-    </script>
-</body>
+        </script>
+    </body>
 </html>
