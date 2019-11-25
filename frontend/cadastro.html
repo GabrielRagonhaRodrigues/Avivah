@@ -82,6 +82,57 @@
                                     <input class="with-gap" name="gender" type="radio" value="Outro" />
                                     <span>Other</span>
                                     </label></p>  
+                                <input name="first_name" id="first_name" type="text" class="validate" required maxlength="80" autocomplete="off">
+                                <label class="active" for="first_name">First Name*</label>
+                            </div>
+                            <div class="input-field col s4">
+                                <input name="last_name" id="last_name" type="text" class="validate" required maxlength="80" autocomplete="off">
+                                <label class="active" for="last_name">Last Name*</label>
+                            </div>
+                        <div class="input-field col s4">
+                            <input name="cpf" id="cpf" type="number" class="validate" required autocomplete="off" maxlength="15">
+                            <label class="active" for="cpf">CPF*</label>
+                            <input name="cpf" id="cpf" type="text" class="validate" required autocomplete="off" maxlength="15">
+                            <label class="active" for="cpf">CPF</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">cake</i>
+                            <input name="birth" id="birth" type="date" class="validate" required>
+                            <label class="active" for="birth">Birth Date*</label>
+                        </div>
+                        <div class="input-field col s6">
+                            
+                            <i class="material-icons prefix" id="pgen">wc</i>
+                            <p id="gender">Gender:*</p>
+                            <p> 
+                            <label>
+                                  <input class="with-gap" name="gender" type="radio"  />
+                                  <span>Male</span>
+                                </label>
+                                <label>
+                                  <input class="with-gap" name="gender" type="radio"  />
+                                  <span>Female</span>
+                                </label>
+                                <label>
+                                  <input class="with-gap" name="gender" type="radio"  />
+                                  <span>Other</span>
+                                </label></p>  
+                        </div>
+                </div>
+                
+            </div>
+            <!--Address-->
+            <h5 class="center"><i class="material-icons prefix">house</i>Address</h5>
+            <div class="row">
+                
+                    <div class="row">
+                            <div class="input-field col s4">
+                                <input id="cep" type="number" class="validate" required autocomplete="off" maxlength="9">
+                                <label class="active" for="cep">CEP*</label>
+                                <input id="cep" type="text" class="validate" required autocomplete="off" maxlength="9">
+                                <label class="active" for="cep">CEP</label>
                             </div>
                     </div>
                     
@@ -121,6 +172,76 @@
                             </div>
                     </div>
                     
+                                <input name="state" id="uf" type="text" class="validate" required autocomplete="off" maxlength="2">
+                                <label class="active" for="uf">UF*</label>
+                            </div>
+                        <div class="input-field col s4">
+                            <input name="city" id="city" type="text" class="validate" required autocomplete="off" maxlength="50">
+                            <label class="active" for="city">City*</label>
+                        </div>
+                        <div class="input-field col s6 l3">
+                                <input name="neighborhood" id="neighborhood" type="text" class="validate" required autocomplete="off" maxlength="80">
+                                <label class="active" for="neighborhood">Neighborhood*</label>
+                            </div>
+                            <div class="input-field col s6 l3">
+                                <input name="street" id="street" type="text" class="validate" required autocomplete="off" maxlength="80">
+                                <label class="active" for="street">Street*</label>
+                            </div>
+                        <div class="input-field col s6 l3">
+                            <input id="number" type="number" class="" required autocomplete="off" maxlength="5">
+                            <label class="active" for="number">Number</label>
+                        </div>
+                        <div class="input-field col s6 l3">
+                            <input name="complement" id="complement" type="text" class="" required autocomplete="off" maxlength="30">
+                            <label class="active" for="complement">Complement</label>
+                        </div>
+                </div>
+                
+            </div>
+            <!--Contacts-->
+            
+            <h5 class="center"><i class="material-icons prefix">contacts</i>Contacts</h5>
+            <div class="row">
+               
+                    <div class="row">
+                        <div class="input-field col s6 l6">
+                            <i class="material-icons prefix">call</i>
+                            <input name="phone" id="phone" type="number" class="" required autocomplete="off" maxlength="14">
+                            <input name="phone" id="phone" type="text" class="validate" required autocomplete="off" maxlength="14">
+                            <label class="active" for="phone">Phone</label>
+                        </div>
+                        <div class="input-field col s6 l6">
+                            <i class="material-icons prefix">call</i>
+                            <input name="second_phone" id="second_phone" type="number" class="" required autocomplete="off" maxlength="14">
+                            <input name="second_phone" id="second_phone" type="text" class="validate" required autocomplete="off" maxlength="14">
+                            <label class="active" for="second_phone">Secondary Phone</label>
+                        </div>
+                        <div class="input-field col s6 l6">
+                            <i class="material-icons prefix">stay_current_portrait</i>
+                            <input name="mobile" id="mobile" type="number" class="validate" required autocomplete="off" maxlength="15">
+                            <label class="active" for="mobile">Mobile*</label>
+                        </div>
+                        <div class="input-field col s6 l6">
+                             <i class="material-icons prefix">stay_current_portrait</i>
+                            <input name="second_mobile" id="second_mobile" type="number" class="" required autocomplete="off" maxlength="15">
+                            <input name="mobile" id="mobile" type="text" class="validate" required autocomplete="off" maxlength="15">
+                            <label class="active" for="mobile">Mobile</label>
+                        </div>
+                        <div class="input-field col s6 l6">
+                             <i class="material-icons prefix">stay_current_portrait</i>
+                            <input name="second_mobile" id="second_mobile" type="text" class="validate" required autocomplete="off" maxlength="15">
+                            <label class="active" for="second_mobile">Secondary Mobile</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">email</i>
+                            <input name="email" id="email" type="email" class="validate" required autocomplete="off" maxlength="80">
+                            <label class="active" for="email">Email*</label>
+                        </div>
+                        <div class="input-field col s6">
+                             <i class="material-icons prefix">email</i>
+                            <input name="second_email" id="second_email" type="email" class="" required autocomplete="off" maxlength="80">
+                            <label class="active" for="second_email">Secondary Email</label>
+                        </div>
                 </div>
                 <!--Contacts-->
                 
@@ -185,6 +306,31 @@
                 </div>
             </form>
                 </button>
+
+                    <div class="row">
+                            <div class="input-field col s12 l6">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input name="login" id="login" type="text" class="validate" required autocomplete="off">
+                                <label class="active" for="login">Login*</label>
+                            </div>
+                            <div class="input-field col s12 l6">
+                                <i class="material-icons prefix">vpn_key</i>
+                                <input name="password" id="password" type="password" class="validate" required autocomplete="off">
+                                <label class="active" for="password">Password*</label>
+                            </div>
+                    </div>
+                </form>
+            </div>
+            <!--Submit-->
+            <button name="submit" class="btn waves-effect waves-light indigo" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+           </div> 
+            <footer class="page-footer white">
+            <div class="footer-copyright grey darken-4">
+                <div class="container center-align">&copy; 2019 Avivah</div>
+            </footer>
+        
         <!-- Compiled and minified JavaScript -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>

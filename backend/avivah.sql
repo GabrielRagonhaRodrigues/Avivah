@@ -30,7 +30,9 @@ create table employies (
 	password varchar(32) not null,
 	idAccess set ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15") null,
 	idManager int null,
-	foreign key (idManager) references manager (idManager)
+	foreign key (idManager) references manager (idManager),
+	idBranch int not null,
+	foreign key (idBranch) references branch (idBranch) 
 	);
 
 drop table if exists manager;
