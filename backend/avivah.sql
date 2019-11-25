@@ -6,7 +6,8 @@ use avivah;
 drop table if exists employies;
 create table employies (
 	idEmployee int not null primary key auto_increment,
-   	nameEmployee varchar(80) not null,
+   	firstnameEmployee varchar(80) not null,
+	lastnameEmployee varchar(80) not null,
   	sexEmployee enum ("Masculino", "Feminino", "Outro") not null,
    	maritalStateEmployee enum ("Solteiro", "Casado", "Viúvo", "Separado", "Divorciado", "Amasiado") not null,
    	dateBornEmployee date not null,
@@ -112,7 +113,8 @@ create table sector (
 drop table if exists users;
 create table users (
 	idUser int not null primary key auto_increment,
-	nameUser varchar(80) not null,    	
+	firstnameUser varchar(80) not null,
+	lastnameUser varchar(80) not null,    	
 	sexUser enum ("Masculino", "Feminino", "Outro") not null,
    	dateBornUser date not null,
    	cepUser int(8) null,
@@ -138,42 +140,42 @@ create table users (
 
 
 
-insert into employies (nameEmployee, sexEmployee, maritalStateEmployee, dateBornEmployee, nacionalityEmployee, cepEmployee, stateEmployee, cityEmployee, neighborhoodEmployee, streetEmployee, numberHouseEmployee, adjunctEmployee, cpfEmployee, telephoneEmployee, telephone2Employee, cellphoneEmployee, cellphone2Employee, emailEmployee, email2Employee,username, password, idAccess, idManager) values
+insert into employies (firstnameEmployee, lastnameEmployee, sexEmployee, maritalStateEmployee, dateBornEmployee, nacionalityEmployee, cepEmployee, stateEmployee, cityEmployee, neighborhoodEmployee, streetEmployee, numberHouseEmployee, adjunctEmployee, cpfEmployee, telephoneEmployee, telephone2Employee, cellphoneEmployee, cellphone2Employee, emailEmployee, email2Employee,username, password, idAccess, idManager) values
 
 
-("Gabriel Cesar Ragonha Rodrigues", "Masculino", "Solteiro", "2000/04/06", "Brasileiro", "17517184", "São Paulo", "Marília", "Maria Antonia", "Antonio Carlos", "155", "", "12345678910", "551434336699", "", "5514996996969", "", "gabrielzinholl@hotmail.com", "gabrielzinnnnnn@outlook.com","gcrr10", "bielzinho10", "1", 1),
+("Gabriel Cesar", "Ragonha Rodrigues", "Masculino", "Solteiro", "2000/04/06", "Brasileiro", "17517184", "São Paulo", "Marília", "Maria Antonia", "Antonio Carlos", "155", "", "12345678910", "551434336699", "", "5514996996969", "", "gabrielzinholl@hotmail.com", "gabrielzinnnnnn@outlook.com","gcrr10", "bielzinho10", "1", 1),
 
-("Nicolas Florêncio Alves", "Masculino", "Solteiro", "2000/10/10", "Brasileiro", "17212060", "São Paulo", "Marília", "Villa Barros", "Agostinho da Silva", "42", "Vermeião, Ap. 122, Bloco 3a, 3º Andar", "10987654321", "551434323036", "", "5514999999999", "", "nikito32@hotmail.com", "nikitinho12@outlook.com","nikitoomega", "coxinhaxxx", "1", 2),
+("Nicolas Florêncio", "Alves", "Masculino", "Solteiro", "2000/10/10", "Brasileiro", "17212060", "São Paulo", "Marília", "Villa Barros", "Agostinho da Silva", "42", "Vermeião, Ap. 122, Bloco 3a, 3º Andar", "10987654321", "551434323036", "", "5514999999999", "", "nikito32@hotmail.com", "nikitinho12@outlook.com","nikitoomega", "coxinhaxxx", "1", 2),
 
-("Joaby Civirino Oliveira Santos", "Masculino", "Solteiro", "1999/03/28", "Indiano", "17374727", "Minas Gerais", "Belo Horizonte", "Carlinho Gomes", "Jujuliette", "255", "", "10987645321", "553132434332", "", "5531994473559", "", "civirino100210@hotmail.com", "civirinopepino31Indialove@outlook.com","xxjobsxx", "boladassonograu315", "1", 3),
+("Joaby Civirino", "Oliveira Santos", "Masculino", "Solteiro", "1999/03/28", "Indiano", "17374727", "Minas Gerais", "Belo Horizonte", "Carlinho Gomes", "Jujuliette", "255", "", "10987645321", "553132434332", "", "5531994473559", "", "civirino100210@hotmail.com", "civirinopepino31Indialove@outlook.com","xxjobsxx", "boladassonograu315", "1", 3),
 
-("Adrian Wilmer Jaquier", "Masculino", "Solteiro", "2004/03/12", "Frances", "17522865", "São Paulo", "Marília", "Joquéi", "Particular", "500", "", "43300744444", "", "", "5514998664076", "", "adrian.jaquier@etec.sp.gov.br", "","anaozinhoqzs015", "brotanagrade", '1', 4),
+("Adrian Wilmer", "Jaquier", "Masculino", "Solteiro", "2004/03/12", "Frances", "17522865", "São Paulo", "Marília", "Joquéi", "Particular", "500", "", "43300744444", "", "", "5514998664076", "", "adrian.jaquier@etec.sp.gov.br", "","anaozinhoqzs015", "brotanagrade", '1', 4),
 
-("Leonardo Augusto Secco Galindo", "Outro", "Amasiado", "1985/09/26", "Brasileiro", "17518184", "São Paulo", "Marília", "Argolo Phiccão", "Joaquim de Oliveira Pinto", "69", "", "54254545215", "551434316699", "551411111111", "5514996996968", "", "leozinhoseccaotetec@hotmail.com", " ", "leozin12", "fpsVida", '3', 2),
+("Leonardo Augusto", "Secco Galindo", "Outro", "Amasiado", "1985/09/26", "Brasileiro", "17518184", "São Paulo", "Marília", "Argolo Phiccão", "Joaquim de Oliveira Pinto", "69", "", "54254545215", "551434316699", "551411111111", "5514996996968", "", "leozinhoseccaotetec@hotmail.com", " ", "leozin12", "fpsVida", '3', 2),
 
-("Matheus Gabriel e Silva", "Outro", "Casado", "1971/02/19", "Polones", "17511114", "Acre", "Rio Branco", "Parque dos Dinossauros", "Mama Brusccuueta", "555", "", "12345008910", "556834334499", "", "5568996006969", "", "Matheuzinqzn@hotmail.com", "", "desenhado", "animezin", '2', 1),
+("Matheus", "Gabriel e Silva", "Outro", "Casado", "1971/02/19", "Polones", "17511114", "Acre", "Rio Branco", "Parque dos Dinossauros", "Mama Brusccuueta", "555", "", "12345008910", "556834334499", "", "5568996006969", "", "Matheuzinqzn@hotmail.com", "", "desenhado", "animezin", '2', 1),
 
-("Giovana Caires Ramos", "Feminino", "Solteiro", "1999/01/16", "Brasileiro", "17510004", "São Paulo", "Marília", "Maria Antonia", "Antonio Carlos", "115", "", "12345687901", "551434106699", "", "5514996990169", "", "gigiovana@hotmail.com", "", "otome002", "gege02", '1', 3),
+("Giovana Caires", "Ramos", "Feminino", "Solteiro", "1999/01/16", "Brasileiro", "17510004", "São Paulo", "Marília", "Maria Antonia", "Antonio Carlos", "115", "", "12345687901", "551434106699", "", "5514996990169", "", "gigiovana@hotmail.com", "", "otome002", "gege02", '1', 3),
 
-("Pedro Henrique Silva Forti", "Masculino", "Viúvo", "1995/10/10", "Brasileiro", "17017184", "São Paulo", "Marília", "Antonio Lurdin", "Rodrimenti Casir", "999", "", "12345699910", "551434399699", "", "5514996776969", "", "Pedrinhohoho@hotmail.com", "bikeforti@yahoo.com", "bikelife", "aro17", '3', 4),
+("Pedro Henrique", "Silva Forti", "Masculino", "Viúvo", "1995/10/10", "Brasileiro", "17017184", "São Paulo", "Marília", "Antonio Lurdin", "Rodrimenti Casir", "999", "", "12345699910", "551434399699", "", "5514996776969", "", "Pedrinhohoho@hotmail.com", "bikeforti@yahoo.com", "bikelife", "aro17", '3', 4),
 
-("Kaique de Queiroz Souza", "Masculino", "Casado", "2003/08/21", "Canadense", "17514484", "São Paulo", "Marília", "Palmital", "Aparecidinha Desaparecida", "92", "", "53765678910", "551488888888", "", "5514997621326", "", "kaiquinhoCone@yahoo.com", "kaiqueluck@outlook.com", "HARDLIFE_do_cone", "arduinotetec", '1', 5),
+("Kaique de Queiroz", "Souza", "Masculino", "Casado", "2003/08/21", "Canadense", "17514484", "São Paulo", "Marília", "Palmital", "Aparecidinha Desaparecida", "92", "", "53765678910", "551488888888", "", "5514997621326", "", "kaiquinhoCone@yahoo.com", "kaiqueluck@outlook.com", "HARDLIFE_do_cone", "arduinotetec", '1', 5),
 
-("João Vitor Clemente Tabom", "Feminino", "Amasiado", "1995/09/11", "Marroquino", "51517184", "Tocantins", "Palmas", "Burguesinho Afro", "Nelson Mandelão", "10", "", "77347778910", "556377776699", "", "556399786269", "", "ClemEntInoAtleta@hotmail.com", "CleMenTinOESPORTISTINHA@outlook.com","hwat", "motivospessoaish", '3', 7),
+("João Vitor", "Clemente Tabom", "Feminino", "Amasiado", "1995/09/11", "Marroquino", "51517184", "Tocantins", "Palmas", "Burguesinho Afro", "Nelson Mandelão", "10", "", "77347778910", "556377776699", "", "556399786269", "", "ClemEntInoAtleta@hotmail.com", "CleMenTinOESPORTISTINHA@outlook.com","hwat", "motivospessoaish", '3', 7),
 
-("Matheus Henrique dos Santos Sousa", "Outro", "Solteiro", "2003/12/13", "Brasileiro", "17500184", "São Paulo", "Marília", "Villa Barros", "Monte do Negão", "669", "", "1234500010", "551440028922", "", "5514996737373", "", "legalferaquerbiscoito@hotmail.com", "", "mateuzin", "yugiohRPG", '3', 5),
+("Matheus Henrique dos Santos", "Sousa", "Outro", "Solteiro", "2003/12/13", "Brasileiro", "17500184", "São Paulo", "Marília", "Villa Barros", "Monte do Negão", "669", "", "1234500010", "551440028922", "", "5514996737373", "", "legalferaquerbiscoito@hotmail.com", "", "mateuzin", "yugiohRPG", '3', 5),
 
-("João Vitor Nascimento Gomes", "Masculino", "Solteiro", "2004/03/10", "Brasileiro", "10000184", "São Paulo", "Marília", "Florenza", "Augusta Afonso", "17", "", "1230000010", "", "", "5514991721618", "", "jVitorNGomess@gmail.com", "joao.gomes140@etec.sp.gov.br", "homiforte", "frangofraco", "1", 5),
+("João Vitor", "Nascimento Gomes", "Masculino", "Solteiro", "2004/03/10", "Brasileiro", "10000184", "São Paulo", "Marília", "Florenza", "Augusta Afonso", "17", "", "1230000010", "", "", "5514991721618", "", "jVitorNGomess@gmail.com", "joao.gomes140@etec.sp.gov.br", "homiforte", "frangofraco", "1", 5),
 
-("Henrique Queiróz de Paula", "Outro", "Amasiado", "2004/04/04", "Sul Africano", "88990184", "Paraná", "Curitiba", "Montes Negros", "Caixinhas Do Sul", "314", "", "1234500000", "554164873432", "", "5541997243281", "", "rik.qPaula@hotmail.com", "", "lolchallenger", "smurfdebronze", '1', 8),
+("Henrique", "Queiróz de Paula", "Outro", "Amasiado", "2004/04/04", "Sul Africano", "88990184", "Paraná", "Curitiba", "Montes Negros", "Caixinhas Do Sul", "314", "", "1234500000", "554164873432", "", "5541997243281", "", "rik.qPaula@hotmail.com", "", "lolchallenger", "smurfdebronze", '1', 8),
 
-("Cesar Augusto de Almeida", "Masculino", "Solteiro", "2003/11/10", "Brasileiro", "17500111", "São Paulo", "Padre Nobrega", "Marakaka", "Fim do Mundo", "169", "", "1236600010", "", "", "551499697826", "", "ceesaraugusto@outlook.com", "", "uncletadinho", "subipacabeça", '3', 2),
+("Cesar", "Augusto de Almeida", "Masculino", "Solteiro", "2003/11/10", "Brasileiro", "17500111", "São Paulo", "Padre Nobrega", "Marakaka", "Fim do Mundo", "169", "", "1236600010", "", "", "551499697826", "", "ceesaraugusto@outlook.com", "", "uncletadinho", "subipacabeça", '3', 2),
 
-("Luis Felipe Gonçalves Modesto", "Outro", "Solteiro", "2004/06/20", "Japonês", "11122284", "Rio de Janeiro", "Rio de Janeiro", "Flamengo time", "Monte do Mengão", "1", "Flamenguistas II, Ap. 1, Bloco 1b, 1° Andar ", "1233300010", "", "", "5521997468101", "", "rjrenaflamengonetime@hotmail.com", "", "logincomsenha", "flamengotime", '1', 1),
+("Luis Felipe", "Gonçalves Modesto", "Outro", "Solteiro", "2004/06/20", "Japonês", "11122284", "Rio de Janeiro", "Rio de Janeiro", "Flamengo time", "Monte do Mengão", "1", "Flamenguistas II, Ap. 1, Bloco 1b, 1° Andar ", "1233300010", "", "", "5521997468101", "", "rjrenaflamengonetime@hotmail.com", "", "logincomsenha", "flamengotime", '1', 1),
 
-("Marllon Silva Araujo Coelho", "Masculino", "Solteiro", "2004/11/19", "Brasileiro", "99900999", "São Paulo", "Julio Mesquita", "Centro", "Dois", "8", "", "9194500010", "", "", "5514997775454", "", "marllonaraujo.silva@gmail.com", "marllon.coelho@etec.sp.gov.br", "seisreais", "muitomeme", '1', 11),
+("Marllon Silva", "Araujo Coelho", "Masculino", "Solteiro", "2004/11/19", "Brasileiro", "99900999", "São Paulo", "Julio Mesquita", "Centro", "Dois", "8", "", "9194500010", "", "", "5514997775454", "", "marllonaraujo.silva@gmail.com", "marllon.coelho@etec.sp.gov.br", "seisreais", "muitomeme", '1', 11),
 
-("Serjeoh Ribeiro", "Outro", "Viúvo", "2009/01/01", "Indiano", "11111111", "Tocantins", "Palmas", "Santos Santos Palmares", "Reta Curvilínea", "3", "", "1234522010", "", "", "556306906706", "556311111111", "serjeoh7meia01@etec.sp.gov.br", "aquiesantospoa@gmail.com", "semtelefone", "velhopele", '3', 13);
+("Serjeoh", "Ribeiro", "Outro", "Viúvo", "2009/01/01", "Indiano", "11111111", "Tocantins", "Palmas", "Santos Santos Palmares", "Reta Curvilínea", "3", "", "1234522010", "", "", "556306906706", "556311111111", "serjeoh7meia01@etec.sp.gov.br", "aquiesantospoa@gmail.com", "semtelefone", "velhopele", '3', 13);
 
 
 
