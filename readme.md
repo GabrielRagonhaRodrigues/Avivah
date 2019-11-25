@@ -12,7 +12,7 @@ Porém, através de uma brincadeira que nosso professor fez, dizendo que ele que
 
 
 #### A seguir, está o diagrama de entidade e relacionamento
-![](imagens_readme/Avivah EER Diagram.png)
+![](imagens_readme/eeravivah.png)
 
 #### Hoje, o nosso projeto ainda está em fase de construção e apresenta um sistema que funciona da seguinte maneira:
 
