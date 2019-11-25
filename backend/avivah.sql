@@ -49,7 +49,9 @@ create table products (
 	sizeProduct set ("Pequeno", "Médio", "Grande") null,
 	deliveryProduct varchar(60) not null,
 	compositionProduct text not null,
-	brandProduct varchar(50) not null
+	brandProduct varchar(50) not null,
+    idProvider int not null,
+    foreign key (idProvider) references providers (idProvider)
    	);
 
 
@@ -177,37 +179,37 @@ insert into employies (nameEmployee, sexEmployee, maritalStateEmployee, dateBorn
 
 
 
-insert into products (nameProduct, quantityProduct, priceProduct, descriptionProduct, typeProduct, colorProduct, sizeProduct, deliveryProduct, compositionProduct, brandProduct) values
+insert into products (nameProduct, quantityProduct, priceProduct, descriptionProduct, typeProduct, colorProduct, sizeProduct, deliveryProduct, compositionProduct, brandProduct, idProvider) values
 
-("Edredom de cama casal 180 fios - Porto Bello", 120, 15.50, "Edredom de casal Porto Bello (200cm X 230cm) 180 fios. Feito com os melhores materiais do mercado nacional para você e sua família dormirem com a melhor qualidade e conforto.", "Cama", "Vermelho,Azul,Verde,Roxo", "Grande", "Prazo de entrega entre 5 a 7 dias úteis", "50% Algodão | 20% Elastano | 30% Poliéster", "Porto Bello"),
+("Edredom de cama casal 180 fios - Porto Bello", 120, 15.50, "Edredom de casal Porto Bello (200cm X 230cm) 180 fios. Feito com os melhores materiais do mercado nacional para você e sua família dormirem com a melhor qualidade e conforto.", "Cama", "Vermelho,Azul,Verde,Roxo", "Grande", "Prazo de entrega entre 5 a 7 dias úteis", "50% Algodão | 20% Elastano | 30% Poliéster", "Porto Bello", 1),
 
-("Edredom de cama solteiro 75 fios - Porto Bello", 120, 15.50, "Edredom de casal Porto Bello (200cm X 230cm) 75 fios. Feito com os melhores materiais do mercado nacional para você e sua família dormirem com a melhor qualidade e conforto.", "Cama", "Vermelho,Azul,Verde,Roxo", "Grande", "Prazo de entrega entre 5 a 7 dias úteis", "50% Algodão | 20% Elastano | 30% Poliéster", "Porto Bello"),
+("Edredom de cama solteiro 75 fios - Porto Bello", 120, 15.50, "Edredom de casal Porto Bello (200cm X 230cm) 75 fios. Feito com os melhores materiais do mercado nacional para você e sua família dormirem com a melhor qualidade e conforto.", "Cama", "Vermelho,Azul,Verde,Roxo", "Grande", "Prazo de entrega entre 5 a 7 dias úteis", "50% Algodão | 20% Elastano | 30% Poliéster", "Porto Bello", 2),
 
-("Edredom de cama queen 150 fios - Porto Bello", 120, 15.50, "Edredom de casal Porto Bello (200cm X 230cm), 150 fios. Feito com os melhores materiais do mercado nacional para você e sua família dormirem com a melhor qualidade e conforto.", "Cama", "Vermelho,Azul,Verde,Roxo", "Grande", "Prazo de entrega entre 5 a 7 dias úteis", "50% Algodão | 20% Elastano | 30% Poliéster", "Porto Bello"),
+("Edredom de cama queen 150 fios - Porto Bello", 120, 15.50, "Edredom de casal Porto Bello (200cm X 230cm), 150 fios. Feito com os melhores materiais do mercado nacional para você e sua família dormirem com a melhor qualidade e conforto.", "Cama", "Vermelho,Azul,Verde,Roxo", "Grande", "Prazo de entrega entre 5 a 7 dias úteis", "50% Algodão | 20% Elastano | 30% Poliéster", "Porto Bello", 5),
 
-("Edredom de cama king Porto 125 fios - Porto Bello", 120, 15.50, "Edredom de casal Porto Bello (200cm X 230cm) 125 fios. Feito com os melhores materiais do mercado nacional para você e sua família dormirem com a melhor qualidade e conforto.", "Cama", "Vermelho,Azul,Verde,Roxo", "Grande", "Prazo de entrega entre 5 a 7 dias úteis", "50% Algodão | 20% Elastano | 30% Poliéster", "Porto Bello"),
+("Edredom de cama king Porto 125 fios - Porto Bello", 120, 15.50, "Edredom de casal Porto Bello (200cm X 230cm) 125 fios. Feito com os melhores materiais do mercado nacional para você e sua família dormirem com a melhor qualidade e conforto.", "Cama", "Vermelho,Azul,Verde,Roxo", "Grande", "Prazo de entrega entre 5 a 7 dias úteis", "50% Algodão | 20% Elastano | 30% Poliéster", "Porto Bello", 1),
 
-("Tapete Egípcio Nefertari", 10, 1999.99, "Tapete Egípcio Nefertari (150cm X 130cm). Feito com os melhores materiais da região sul do Egito, relíquias retiradas do solo das catacumbas dos faraós, com a melhor qualidade de tecido.", "Casa", "Roxo,Vermelho", "Médio", "Prazo de entrega entre 4 a 5 dias úteis", "30% Viscose | 70% Algodão", "Egipcian's Carpet"),
+("Tapete Egípcio Nefertari", 10, 1999.99, "Tapete Egípcio Nefertari (150cm X 130cm). Feito com os melhores materiais da região sul do Egito, relíquias retiradas do solo das catacumbas dos faraós, com a melhor qualidade de tecido.", "Casa", "Roxo,Vermelho", "Médio", "Prazo de entrega entre 4 a 5 dias úteis", "30% Viscose | 70% Algodão", "Egipcian's Carpet", 7),
 
-("Tapete Americano Black-Bear", 14, 1499.99, "Tapete Americano Black-Bear (350cm X 300cm). Feito com pele do urso Ursus americanus, o melhor tapete de pele animal já produzido pelo homem.", "Casa", "Preto", "Grande", "Prazo de entrega entre 7 a 8 dias úteis", "30% Couro | 30% Poliéster | 40% Algodão", "OffBear"),
+("Tapete Americano Black-Bear", 14, 1499.99, "Tapete Americano Black-Bear (350cm X 300cm). Feito com pele do urso Ursus americanus, o melhor tapete de pele animal já produzido pelo homem.", "Casa", "Preto", "Grande", "Prazo de entrega entre 7 a 8 dias úteis", "30% Couro | 30% Poliéster | 40% Algodão", "OffBear", 2),
 
-("Cortina DuoFold - TopHouse", 35, 69.99, "Cortina DuoFold Tophouse (250cm X 300cm). Com sistema de abertura diferenciado, a cortina DuoFold da TopHouse é perfeito para casas que querem ter um aspecto visual incrível.", "Casa", "Branco", "Grande", "Prazo de entrega entre 5 a 7 dias úteis", "100% Algodão", "TopHouse"),
+("Cortina DuoFold - TopHouse", 35, 69.99, "Cortina DuoFold Tophouse (250cm X 300cm). Com sistema de abertura diferenciado, a cortina DuoFold da TopHouse é perfeito para casas que querem ter um aspecto visual incrível.", "Casa", "Branco", "Grande", "Prazo de entrega entre 5 a 7 dias úteis", "100% Algodão", "TopHouse", 12),
 
-("Cortina Voil - TopHouse", 66, 75.99, "Cortina Boil TopHouse (300cm X 350cm). Cortina de tecido fino, perfeita para locais que recebem mais incidência de luz.", "Casa", "Preto,Branco", "Grande", "Prazo de entrega entre 5 a 7 dias úteis", "100% Algodão", "TopHouse"),
+("Cortina Voil - TopHouse", 66, 75.99, "Cortina Boil TopHouse (300cm X 350cm). Cortina de tecido fino, perfeita para locais que recebem mais incidência de luz.", "Casa", "Preto,Branco", "Grande", "Prazo de entrega entre 5 a 7 dias úteis", "100% Algodão", "TopHouse", 1),
 
-("Cortina Blackout - TopHouse", 12, 120.00, "Cortina Blackout (350cm X 400cm). Cortina com 100% de barragem de luz, perfeita para locais com necessidade de pouca luz, como quarto e Home Theater.", "Casa", "Preto,Branco", "Grande", "Prazo de entrega entre 4 a 7 dias úteis", "100% Algodão", "TopHouse"),
+("Cortina Blackout - TopHouse", 12, 120.00, "Cortina Blackout (350cm X 400cm). Cortina com 100% de barragem de luz, perfeita para locais com necessidade de pouca luz, como quarto e Home Theater.", "Casa", "Preto,Branco", "Grande", "Prazo de entrega entre 4 a 7 dias úteis", "100% Algodão", "TopHouse", 2),
 
-("Toalha Banhão - GoodBath", 89, 50.00, "Toalha Banhão GoodBath (90cm X 150cm). Toalha felpuda e macia, perfeita para melhor conforto pós banho.", "Banho", "Vermelho,Azul,Preto", "Médio", "Prazo de entrega entre 3 a 5 dias úteis", "100% Algodão", "GoodBath"),
+("Toalha Banhão - GoodBath", 89, 50.00, "Toalha Banhão GoodBath (90cm X 150cm). Toalha felpuda e macia, perfeita para melhor conforto pós banho.", "Banho", "Vermelho,Azul,Preto", "Médio", "Prazo de entrega entre 3 a 5 dias úteis", "100% Algodão", "GoodBath", 2),
 
-("Toalha de Rosto - GoodBath", 100, 22.50, "Toalha de Rosto GoodBath (48cm X 80cm). Toalha pequena macia e elegante, perfeita para secar seu rosto de maneira delicada.", "Banho", "Verde,Roxo,Branco,Preto", "Pequeno", "Prazo de entrega entre 2 a 5 dias úteis", "100% Algodão", "GoodBath"),
+("Toalha de Rosto - GoodBath", 100, 22.50, "Toalha de Rosto GoodBath (48cm X 80cm). Toalha pequena macia e elegante, perfeita para secar seu rosto de maneira delicada.", "Banho", "Verde,Roxo,Branco,Preto", "Pequeno", "Prazo de entrega entre 2 a 5 dias úteis", "100% Algodão", "GoodBath", 12),
 
-("Tapete Box - GoodBath", 43, 26.00, "Tapete Box GoodBath (64cm X 35cm). Tapete antiderrapante para box, feito para evitar quedas e ter segurança durante o banho, ideal para pisos escorregadios.", "Banho", "Azul,Preto", "Pequeno", "Prazo de entrega entre 2 a 7 dias úteis", "100% PVC", "GoodBath"),
+("Tapete Box - GoodBath", 43, 26.00, "Tapete Box GoodBath (64cm X 35cm). Tapete antiderrapante para box, feito para evitar quedas e ter segurança durante o banho, ideal para pisos escorregadios.", "Banho", "Azul,Preto", "Pequeno", "Prazo de entrega entre 2 a 7 dias úteis", "100% PVC", "GoodBath", 1),
 
-("Toalha de Mesa Retângular - Dible", 82, 70.80, "Toalha de Mesa Retângular (170cm X 230cm). Feita para decorar e manter limpa sua mesa retângular! Composta por materiais de alta qualidade. ", "Mesa", "Bege,Roxo,Preto,Laranja,Vermelho,Rosa,Marrom,Cinza", "Grande", "Prazo de entrega entre 3 a 4 dias úteis", "40% Algodão | 60% Poliéster", "Dible"),
+("Toalha de Mesa Retângular - Dible", 82, 70.80, "Toalha de Mesa Retângular (170cm X 230cm). Feita para decorar e manter limpa sua mesa retângular! Composta por materiais de alta qualidade. ", "Mesa", "Bege,Roxo,Preto,Laranja,Vermelho,Rosa,Marrom,Cinza", "Grande", "Prazo de entrega entre 3 a 4 dias úteis", "40% Algodão | 60% Poliéster", "Dible", 1),
 
-("Toalha de Mesa Redonda - Dible", 150, 65.50, "Toalha de Mesa Redonda (200cm X 0cm). Feita para decorar e manter limpa sua mesa redonda! Composta por materiais de alta qualidade.", "Mesa", "Bege,Roxo,Preto,Laranja,Vermelho,Rosa,Marrom,Cinza", "Grande", "Prazo de entrega entre 3 a 4 dias úteis", "40% Algodão | 60% Poliéster", "Dible"),
+("Toalha de Mesa Redonda - Dible", 150, 65.50, "Toalha de Mesa Redonda (200cm X 0cm). Feita para decorar e manter limpa sua mesa redonda! Composta por materiais de alta qualidade.", "Mesa", "Bege,Roxo,Preto,Laranja,Vermelho,Rosa,Marrom,Cinza", "Grande", "Prazo de entrega entre 3 a 4 dias úteis", "40% Algodão | 60% Poliéster", "Dible", 9),
 
-("Toalha de Mesa Quadrada - Dible", 34, 60.00, "Toalha de Mesa Quadrada (180cm X 180cm). Feita para decorar e manter limpa sua mesa quadrada! Composta por materiais de alta qualidade.", "Mesa", "Vermelho,Azul,Verde,Roxo,Branco", "Grande", "Prazo de entrega entre 5 a 4 dias úteis", "100% Poliéster", "Dible");
+("Toalha de Mesa Quadrada - Dible", 34, 60.00, "Toalha de Mesa Quadrada (180cm X 180cm). Feita para decorar e manter limpa sua mesa quadrada! Composta por materiais de alta qualidade.", "Mesa", "Vermelho,Azul,Verde,Roxo,Branco", "Grande", "Prazo de entrega entre 5 a 4 dias úteis", "100% Poliéster", "Dible", 4);
 
 
 
