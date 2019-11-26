@@ -150,7 +150,9 @@ VALUES ('$firstname', '$lastname', '$gender', '$birthdate', '$cep', '$state', '$
 mysqli_query ($conexao, $query);
 if(!mysqli_query ($conexao, $query)){
     echo mysqli_errno($conexao) . ": " . mysqli_error($conexao) . "\n";
-}
+}else{
+    echo "<script> alert('Cadastrado com sucesso!') </script>";
 header ('location: ../frontend/index.html');
+}
 
 ?>
