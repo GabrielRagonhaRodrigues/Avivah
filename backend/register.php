@@ -2,9 +2,10 @@
 
 include_once 'conexao.php';
 
-$name = $_POST['name'];
-$gender = $_POST['sexo'];
-$birthdate = $_POST['nascimento'];
+$firstname = $_POST['first_name'];
+$lastname = $_POST['last_name'];
+$gender = $_POST['gender'];
+$birthdate = $_POST['birth'];
 $cep = $_POST['cep'];
 
 //Dando REPLACE na MASK para o INSERT
@@ -12,7 +13,7 @@ $cep = $_POST['cep'];
 
 $state = $_POST['state'];
 $city = $_POST['city'];
-$district = $_POST['district'];
+$district = $_POST['neighborhood'];
 $street = $_POST['street'];
 $number = $_POST['number'];
 $complement = $_POST['complement'];
@@ -141,16 +142,17 @@ if($num_rows == 0) {
 }
 
 $query = "INSERT INTO users 
-(nameUser, sexUser, dateBornUser, cepUser, stateUser, cityUser, neighborhoodUser, streetUser, numberHouseUser, adjunctUser ,cpfUser ,telephoneUser ,telephone2User ,cellphoneUser ,cellphone2User ,
+(firstnameUser, lastnameUser, sexUser, dateBornUser, cepUser, stateUser, cityUser, neighborhoodUser, streetUser, numberHouseUser, adjunctUser ,cpfUser ,telephoneUser ,telephone2User ,cellphoneUser ,cellphone2User ,
 emailUser ,email2User ,username ,password, idAccess)
-VALUES ('$name', '$gender', '$birthdate', '$cep', '$state', '$city', '$district', '$street','$number', '$complement', '$cpf', 
+VALUES ('$firstname', '$lastname', '$gender', '$birthdate', '$cep', '$state', '$city', '$district', '$street','$number', '$complement', '$cpf', 
 '$tel1', '$tel2', '$cel1', '$cel2', '$email', '$email2', '$user', '$pass', 2)";
-
 //Mysqli query faz a query no banco
 mysqli_query ($conexao, $query);
 if(!mysqli_query ($conexao, $query)){
     echo mysqli_errno($conexao) . ": " . mysqli_error($conexao) . "\n";
-}
+}else{
+    echo "<script> alert('Cadastrado com sucesso!') </script>";
 header ('location: ../frontend/index.html');
+}
 
 ?>
