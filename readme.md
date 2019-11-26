@@ -10,6 +10,10 @@ Inicialmente o projeto tinha como principal objetivo o desenvolvimento de um ban
 
 Porém, através de uma brincadeira que nosso professor fez, dizendo que ele queria que nós desenvolvessemos um sistema que pudesse acessar o banco de dados através da web;De primeira, acreditamos em que ele disse e nos desesperamos pensando na forma de como poderiamos fazer tal conexão, como resultado disso, partimos para o estudo e resolvemos então usar a linguagem PHP para efetuar tal tarefa.
 
+
+#### A seguir, está o diagrama de entidade e relacionamento
+![](imagens_readme/eeravivah.png)
+
 #### Hoje, o nosso projeto ainda está em fase de construção e apresenta um sistema que funciona da seguinte maneira:
 
 1. Pagina de login *(index.html)* recebe o nome de usuário e a senha;

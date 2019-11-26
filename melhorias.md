@@ -1,10 +1,10 @@
 ### Melhorias para o projeto Avivah
 
-- [] Normalização da database Avivah
-- [] Correção de senhas com acentuação
-- [] Página para a loja
-- [] Adicionar criptografia md5 nos inserts de password
-- [] Melhoria do frontend
+- [ ] Normalização da database Avivah
+- [ ] Correção de senhas com acentuação
+- [ ] Página para a loja
+- [ ] Adicionar criptografia md5 nos inserts de password
+- [ ] Melhoria do frontend
 
 ### Sites para estudo
 
