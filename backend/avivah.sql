@@ -92,7 +92,7 @@ create table providers (
 
 drop table if exists branch;
 create table branch (
-	idBranch int not null primary key auto_increment,
+	idBranch int primary key auto_increment,
 	cepBranch int(10) null,
    	stateBranch varchar(80) not null,
    	cityBranch varchar(80) not null,
@@ -253,3 +253,11 @@ insert into providers (countryProvider, stateProvider, cityProvider, cepProvider
 
     ('Brasil','São Paulo','Marília','17125501', 'Romero Zaninoto', 'Alemanco Ronaldo', '132', '88632364', '', '998122109', '', '560', '250', 'Joany Julua','006700700762', 'SP', '09970501517464', '00004433032', 'OPTANTE','A', '2017/07/07', '12990575811', 'Jujuzunhajujuba', 'sdcvi5454');  
     
+    
+    
+    desc branch;
+    INSERT INTO branch (cepBranch, stateBranch, cityBranch, neighborhoodBranch, streetBranch, numberBranch) values 
+    (17521090, "São Paulo", "Marília", "Marajó", "Rua Francisco dos Santos", 80),
+    (17590232, "Minas Gerais", "Ouro Preto", "Bairro do ERRO", "Rua do diamante", 90);
+    
+    select e.firstNameEmployee, e.lastNameEmployee, e.idManager, b.idBranch from employies as e join branch as b on e.idBranch where e.idBranch = b.idBranch group by e.idManager;
