@@ -146,7 +146,6 @@ $query = "INSERT INTO users
 emailUser ,email2User ,username ,password, idAccess)
 VALUES ('$firstname', '$lastname', '$gender', '$birthdate', '$cep', '$state', '$city', '$district', '$street','$number', '$complement', '$cpf', 
 '$tel1', '$tel2', '$cel1', '$cel2', '$email', '$email2', '$user', '$pass', 2)";
-
 //Mysqli query faz a query no banco
 mysqli_query ($conexao, $query);
 if(!mysqli_query ($conexao, $query)){
