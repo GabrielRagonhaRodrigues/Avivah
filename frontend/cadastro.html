@@ -23,15 +23,15 @@
                     <a href="cadastro.html" class="brand-logo">Avivah</a>
                     <a href="cadastro.html" class="sidenav-trigger" data-target="mobile-links"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html">Login</a></li>
-                        <li><a href="#">Help</a></li>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html">Entrar</a></li>
+                        <li><a href="#">Ajuda</a></li>
                     </ul>
                 </div>
                 <ul class="sidenav" id="mobile-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Entrar</a></li>
+                    <li><a href="#">Ajuda</a></li>
                 </ul>
             </nav>
         <!--Container-->
@@ -41,118 +41,105 @@
                 <h1 class="center">Cadastro Avivah</h1>
 
                 <!--Personal Information-->
-            <h5 class="center"><i class="material-icons prefix">person</i>Personal Information</h5>
+            <h5 class="center"><i class="material-icons prefix">person</i>Informações Pessoais</h5>
             <div class="row">
                 <p class="col s12">
                     <div class="row">
-                            <div class="input-field col s4">
+                            <div class="input-field col s12 l4">
                                 <input name="first_name" id="first_name" type="text" class="validate" required maxlength="15" autocomplete="off">
-                                <label class="active" for="first_name">First Name*</label>
+                                <label class="active" for="first_name">Primeiro Nome</label>
                             </div>
-                            <div class="input-field col s4">
+                            <div class="input-field col s12 l4">
                                 <input name="last_name" id="last_name" type="text" class="validate" required maxlength="15" autocomplete="off">
-                                <label class="active" for="last_name">Last Name*</label>
+                                <label class="active" for="last_name">Sobrenome</label>
                             </div>
-                        <div class="input-field col s4">
+                        <div class="input-field col s12 l4">
                             <input name="cpf" id="cpf" type="number" class="validate" required autocomplete="off" maxlength="15" data-length="15">
-                            <label class="active" for="cpf">CPF*</label>
+                            <label class="active" for="cpf">CPF</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s6">
+                        <div class="input-field col s12 l6">
                             <i class="material-icons prefix">cake</i>
                             <input name="birth" id="birth" type="text" class="datepicker" required>
-                            <label class="active" for="birth">Birth Date*</label>
+                            <label class="active" for="birth">Nascimento</label>
                         </div>
-                        <div class="input-field col s6">
+                        <div class="input-field col s12 l6">
                         <i class="material-icons prefix">wc</i>
                             <select required>
-                                <option value="" disabled selected>Choose your gender</option>
-                                <option value="1">Male</option>
-                                <option value="2">Female</option>
-                                <option value="3">Other</option>
+                                <option value="" disabled selected>Selecione seu gênero</option>
+                                <option value="1">Masculino</option>
+                                <option value="2">Feminino</option>
+                                <option value="3">Outro</option>
                             </select>
-                              <label>Gender</label>
+                              <label>Gênero</label>
                         </div>
                     </div> 
             </div>
                 <!--Address-->
-            <h5 class="center"><i class="material-icons prefix">house</i>Address</h5>
+            <h5 class="center"><i class="material-icons prefix">house</i>Endereço</h5>
             <div class="row">
                 
                     <div class="row">
-                            <div class="input-field col s4">
+                            <div class="input-field col s12 l4">
                                 <input id="cep" type="number" class="validate" required autocomplete="off" maxlength="9" data-length="9">
-                                <label class="active" for="cep">CEP*</label>
+                                <label class="active" for="cep">CEP</label>
                             </div>
-                            <div class="input-field col s4">
+                            <div class="input-field col s12 l4">
                                 <input name="state" id="uf" type="text" class="validate" required autocomplete="off" maxlength="2" data-length="2">
-                                <label class="active" for="uf">UF*</label>
+                                <label class="active" for="uf">UF</label>
                             </div>
-                        <div class="input-field col s4">
+                        <div class="input-field col s12 l4">
                             <input name="city" id="city" type="text" class="validate" required autocomplete="off" maxlength="50">
-                            <label class="active" for="city">City*</label>
+                            <label class="active" for="city">Cidade</label>
                         </div>
-                        <div class="input-field col s6 l3">
-                                <input name="neighborhood" id="neighborhood" type="text" class="validate" required autocomplete="off" maxlength="80">
-                                <label class="active" for="neighborhood">Neighborhood*</label>
-                            </div>
-                            <div class="input-field col s6 l3">
-                                <input name="street" id="street" type="text" class="validate" required autocomplete="off" maxlength="80">
-                                <label class="active" for="street">Street*</label>
-                            </div>
-                        <div class="input-field col s6 l3">
+                        <div class="input-field col s12 l4">
+                            <input name="street" id="street" type="text" class="validate" required autocomplete="off" maxlength="80">
+                            <label class="active" for="street">Rua</label>
+                        </div>
+                        <div class="input-field col s12 l4">
                             <input id="number" type="number" class="validate" required autocomplete="off" maxlength="4">
-                            <label class="active" for="number">Number*</label>
+                            <label class="active" for="number">Número</label>
                         </div>
-                        <div class="input-field col s6 l3">
+                        <div class="input-field col s12 l4">
                             <select>
-                                <option value="" disabled selected>Choose a complement</option>
-                                <option value="1">House</option>
-                                <option value="2">Apartment</option>
+                                <option value="" disabled selected>Selecione um complemento</option>
+                                <option value="1">Casa</option>
+                                <option value="2">Apartamento</option>
                                 <option value="3">Hotel</option>
-                                <option value="4">Condominium</option>
+                                <option value="4">Condomínio</option>
                             </select>
-                              <label>Complement</label>
+                              <label>Complemento</label>
                         </div>
                 </div>
                 
             </div>
                 <!--Contacts-->
                 
-                <h5 class="center"><i class="material-icons prefix">contacts</i>Contacts</h5>
+                <h5 class="center"><i class="material-icons prefix">contacts</i>Contato</h5>
                 <div class="row">
                 
                         <div class="row">
-                            <div class="input-field col s6 l6">
-                                <i class="material-icons prefix">call</i>
-                                <input name="tel1" id="phone" type="text" class="validate" autocomplete="off" maxlength="14" data-length="14">
-                                <label class="active" for="phone">Phone</label>
-                            </div>
-                            <div class="input-field col s6 l6">
-                                <i class="material-icons prefix">call</i>
-                                <input name="tel2" id="second_phone" type="text" class="validate" autocomplete="off" maxlength="14" data-length="14">
-                                <label class="active" for="second_phone">Secondary Phone</label>
-                            </div>
-                            <div class="input-field col s6 l6">
+                            
+                            <div class="input-field col s12 l6">
                                 <i class="material-icons prefix">stay_current_portrait</i>
                                 <input name="cel1" id="mobile" type="text" class="validate" required autocomplete="off" maxlength="15" data-length="15">
-                                <label class="active" for="mobile">Mobile*</label>
+                                <label class="active" for="mobile">Celular</label>
                             </div>
-                            <div class="input-field col s6 l6">
+                            <div class="input-field col s12 l6">
                                 <i class="material-icons prefix">stay_current_portrait</i>
                                 <input name="cel2" id="second_mobile" type="text" class="validate" autocomplete="off" maxlength="15" data-length="15">
-                                <label class="active" for="second_mobile">Secondary Mobile</label>
+                                <label class="active" for="second_mobile">Celular Reserva</label>
                             </div>
-                            <div class="input-field col s6">
+                            <div class="input-field col s12 l6">
+                                <i class="material-icons prefix">call</i>
+                                <input name="tel1" id="phone" type="text" class="validate" autocomplete="off" maxlength="14" data-length="14">
+                                <label class="active" for="phone">Telefone</label>
+                            </div>
+                            <div class="input-field col s12 l6">
                                 <i class="material-icons prefix">email</i>
                                 <input name="email1" id="email" type="email" class="validate" required autocomplete="off" maxlength="80">
-                                <label class="active" for="email">Email*</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <i class="material-icons prefix">email</i>
-                                <input name="email2" id="second_email" type="email" class="validate" autocomplete="off" maxlength="80">
-                                <label class="active" for="second_email">Secondary Email</label>
+                                <label class="active" for="email">Email</label>
                             </div>
                     </div>
                     
@@ -165,18 +152,18 @@
                                 <div class="input-field col s12 l6">
                                     <i class="material-icons prefix">account_circle</i>
                                     <input name="user" id="login" type="text" class="validate" required autocomplete="off">
-                                    <label class="active" for="login">Login*</label>
+                                    <label class="active" for="login">Usuário</label>
                                 </div>
                                 <div class="input-field col s12 l6">
                                     <i class="material-icons prefix">vpn_key</i>
                                     <input name="password" id="password" type="password" class="validate" required autocomplete="off">
-                                    <label class="active" for="password">Password*</label>
+                                    <label class="active" for="password">Senha</label>
                                 </div>
                         </div>
                     
                 </div>
                 <!--Submit-->
-                <button name="submit" class="btn waves-effect waves-light indigo" type="submit" name="action">Submit
+                <button name="submit" class="btn waves-effect waves-light indigo" type="submit" name="action">Cadastrar
                     <i class="material-icons right">send</i>
                 </div>
             </button>
