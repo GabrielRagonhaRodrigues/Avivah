@@ -13,7 +13,7 @@
             input[type=number]::-webkit-outer-spin-button { 
                 -webkit-appearance: none; 
                 margin: 0; 
-    }
+            }
             </style>
     </head>
     <body>
@@ -46,27 +46,27 @@
                 <p class="col s12">
                     <div class="row">
                             <div class="input-field col s4">
-                                <input name="first_name" id="first_name" type="text" class="validate" required maxlength="80" autocomplete="off">
+                                <input name="first_name" id="first_name" type="text" class="validate" required maxlength="15" autocomplete="off">
                                 <label class="active" for="first_name">First Name*</label>
                             </div>
                             <div class="input-field col s4">
-                                <input name="last_name" id="last_name" type="text" class="validate" required maxlength="80" autocomplete="off">
+                                <input name="last_name" id="last_name" type="text" class="validate" required maxlength="15" autocomplete="off">
                                 <label class="active" for="last_name">Last Name*</label>
                             </div>
                         <div class="input-field col s4">
-                            <input name="cpf" id="cpf" type="number" class="validate" required autocomplete="off" maxlength="15">
+                            <input name="cpf" id="cpf" type="number" class="validate" required autocomplete="off" maxlength="15" data-length="15">
                             <label class="active" for="cpf">CPF*</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">cake</i>
-                            <input name="birth" id="birth" type="date" class="validate" required>
+                            <input name="birth" id="birth" type="text" class="datepicker" required>
                             <label class="active" for="birth">Birth Date*</label>
                         </div>
                         <div class="input-field col s6">
                         <i class="material-icons prefix">wc</i>
-                            <select>
+                            <select required>
                                 <option value="" disabled selected>Choose your gender</option>
                                 <option value="1">Male</option>
                                 <option value="2">Female</option>
@@ -82,11 +82,11 @@
                 
                     <div class="row">
                             <div class="input-field col s4">
-                                <input id="cep" type="number" class="validate" required autocomplete="off" maxlength="9">
+                                <input id="cep" type="number" class="validate" required autocomplete="off" maxlength="9" data-length="9">
                                 <label class="active" for="cep">CEP*</label>
                             </div>
                             <div class="input-field col s4">
-                                <input name="state" id="uf" type="text" class="validate" required autocomplete="off" maxlength="2">
+                                <input name="state" id="uf" type="text" class="validate" required autocomplete="off" maxlength="2" data-length="2">
                                 <label class="active" for="uf">UF*</label>
                             </div>
                         <div class="input-field col s4">
@@ -102,12 +102,18 @@
                                 <label class="active" for="street">Street*</label>
                             </div>
                         <div class="input-field col s6 l3">
-                            <input id="number" type="number" class="" required autocomplete="off" maxlength="4">
+                            <input id="number" type="number" class="validate" required autocomplete="off" maxlength="4">
                             <label class="active" for="number">Number*</label>
                         </div>
                         <div class="input-field col s6 l3">
-                            <input name="complement" id="complement" type="text" class="" required autocomplete="off" maxlength="30">
-                            <label class="active" for="complement">Complement</label>
+                            <select>
+                                <option value="" disabled selected>Choose a complement</option>
+                                <option value="1">House</option>
+                                <option value="2">Apartment</option>
+                                <option value="3">Hotel</option>
+                                <option value="4">Condominium</option>
+                            </select>
+                              <label>Complement</label>
                         </div>
                 </div>
                 
@@ -120,22 +126,22 @@
                         <div class="row">
                             <div class="input-field col s6 l6">
                                 <i class="material-icons prefix">call</i>
-                                <input name="tel1" id="phone" type="text" class="validate" autocomplete="off" maxlength="14">
+                                <input name="tel1" id="phone" type="text" class="validate" autocomplete="off" maxlength="14" data-length="14">
                                 <label class="active" for="phone">Phone</label>
                             </div>
                             <div class="input-field col s6 l6">
                                 <i class="material-icons prefix">call</i>
-                                <input name="tel2" id="second_phone" type="text" class="validate" autocomplete="off" maxlength="14">
+                                <input name="tel2" id="second_phone" type="text" class="validate" autocomplete="off" maxlength="14" data-length="14">
                                 <label class="active" for="second_phone">Secondary Phone</label>
                             </div>
                             <div class="input-field col s6 l6">
                                 <i class="material-icons prefix">stay_current_portrait</i>
-                                <input name="cel1" id="mobile" type="text" class="validate" required autocomplete="off" maxlength="15">
+                                <input name="cel1" id="mobile" type="text" class="validate" required autocomplete="off" maxlength="15" data-length="15">
                                 <label class="active" for="mobile">Mobile*</label>
                             </div>
                             <div class="input-field col s6 l6">
                                 <i class="material-icons prefix">stay_current_portrait</i>
-                                <input name="cel2" id="second_mobile" type="text" class="validate" autocomplete="off" maxlength="15">
+                                <input name="cel2" id="second_mobile" type="text" class="validate" autocomplete="off" maxlength="15" data-length="15">
                                 <label class="active" for="second_mobile">Secondary Mobile</label>
                             </div>
                             <div class="input-field col s6">
@@ -175,6 +181,7 @@
                 </div>
             </button>
             </form>
+            <!--Footer-->
             <footer class="page-footer white">
                 <div class="footer-copyright grey darken-4">
                     <div class="container center-align">&copy; 2019 Avivah</div>
@@ -186,6 +193,8 @@
         $(document).ready(function(){
             $('.sidenav').sidenav();
             $('select').not('.disabled').formSelect();
+            $('input#cpf, cep, uf, phone, second_phone, mobile, second_mobile').characterCounter();
+            $('.datepicker').datepicker();
         });
         </script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
