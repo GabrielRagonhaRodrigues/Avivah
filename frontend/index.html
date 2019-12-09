@@ -2,26 +2,98 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/estilo.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
         <title>Login Avivah</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+            
+        </style>
     </head>
     <body>  
-    
-    <form name="loginform" method="POST" action="../backend/auth.php">
-        <div id="caixa">
-             <br><h1>Faça seu login na Avivah</h1><br>
-            <input type="text" placeholder="Usuário" name="user" required><br>
-            <input type="password" placeholder="Senha" name="password" required><br><br>
-            <input type="submit" value="Enviar"><br><br>
-            <a id="linkcadastro" href="cadastro.html">Deseja <strong>cadastrar-se</strong>?</a>
+        <!--navigation bar-->
+        <nav class="nav-wrapper indigo">
+                <div class="container">
+                    <a href="cadastro.html" class="brand-logo">Avivah</a>
+                    <a href="cadastro.html" class="sidenav-trigger" data-target="mobile-links"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html">Entrar</a></li>
+                        <li><a href="#">Ajuda</a></li>
+                    </ul>
+                </div>
+                <ul class="sidenav" id="mobile-links">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Entrar</a></li>
+                    <li><a href="#">Ajuda</a></li>
+                </ul>
+            </nav>
+        <!--Container-->
+            <div class="container">
+        <!--Title-->
+            <h1 class="center">Acesse sua conta</h1>
+        <!--Login-->
+        <div class="row">
+            <div class="container">
+                <p class="col s12"></p>
+                
+                <div class="row">
+                    <div class="input-field col m12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input name="user_login" id="user_login" type="text" class="validate" required autocomplete="off">
+                        <label for="user_login" class="active">Usuário ou Email</label>
+                    </div>
+                </div>
+                
+            <!--Password-->
+            <div class="row">
+                <div class="input-field col m12">
+                    <i class="material-icons prefix">vpn_key</i>
+                    <input name="user_password" id="user_password" type="password" class="validate" required autocomplete="off">
+                    <label for="user_password" class="active">Senha</label>
+                </div>
+            </div>
         </div>
-    </form>
-        
-<!-- _________________________________________________________________________________________________________________________________________________________________________________________________________________________ -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <!--Submit Button-->
+        <button name="submit" class="btn waves-effect waves-light indigo" type="submit" name="action">Entrar
+        <i class="material-icons right">send</i>
+        </button>
+        <!--Container Close-->
+            </div>
+        </div>
+        <div class="section"></div>
+        <!--Footer-->
+        <footer class="page-footer grey darken-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Opções:</h5>
+                        <ul>
+                            <li class="grey-text text-lighten-4" href="#!">Fazer Login</li>
+                            <li class="grey-text text-lighten-4" href="#!">Voltar a página inícial</li>
+                        </ul>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <img class="materialboxed" src="nsacode.png" alt="QRcode" width="110" height="110"></img>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright grey darken-4">
+                <div class="container">
+                    &copy; 2019 Avivah
+                    <a class="grey-text darken-4 right" href="https://hidalgojunior.com.br/">Hidalgo Junior</a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.sidenav').sidenav();
+                $('select').not('.disabled').formSelect();
+                $('.materialboxed').materialbox();
+                });
+            </script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
     </body>
 </html>
